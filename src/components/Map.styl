@@ -1,0 +1,44 @@
+bg_grey = #eeeeee
+zoom_grey = #dadada
+
+.mapview
+    flex 1 1 auto
+
+.mapview > svg
+    max-height 100%
+    width 100%
+
+.tGroup
+    transition transform 1s ease
+
+.constituency
+    stroke-width 1px
+    stroke none
+    transform ''
+
+.constituency:not(.zoomed):hover
+    opacity 0.8
+
+.constituency.zoomed
+    opacity 0.5
+    stroke black
+    stroke-dasharray 1 5
+
+.constituency.zoomed.focused
+    opacity 0.8
+    stroke black
+    stroke-dasharray 1 0
+
+.constituency.zoomed.focusedhover
+    opacity 0.2
+
+.constituency.zoomed.selected
+    opacity 1
+    transform translate(10px, -10px)
+    z-index -100
+
+.constituency.zoomed.focused.selectedhover
+    opacity 1
+
+.scotland, .wales
+    fill bg_grey

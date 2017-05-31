@@ -1,0 +1,2294 @@
+{
+    "E14000693": {
+        "name": "Epping Forest",
+        "reg": "E15000006"
+    },
+    "E14000557": {
+        "name": "Bexhill and Battle",
+        "reg": "E15000008"
+    },
+    "E14000744": {
+        "name": "Hertford and Stortford",
+        "reg": "E15000006"
+    },
+    "E14000892": {
+        "name": "Redditch",
+        "reg": "E15000005"
+    },
+    "E14000559": {
+        "name": "Birkenhead",
+        "reg": "E15000002"
+    },
+    "E14000732": {
+        "name": "Harrow West",
+        "reg": "E15000007"
+    },
+    "E14000709": {
+        "name": "Gateshead",
+        "reg": "E15000001"
+    },
+    "E14000934": {
+        "name": "South Cambridgeshire",
+        "reg": "E15000006"
+    },
+    "E14000699": {
+        "name": "Fareham",
+        "reg": "E15000008"
+    },
+    "E14000800": {
+        "name": "Luton North",
+        "reg": "E15000006"
+    },
+    "E14000612": {
+        "name": "Bury South",
+        "reg": "E15000002"
+    },
+    "E14001003": {
+        "name": "Truro and Falmouth",
+        "reg": "E15000009"
+    },
+    "E14000553": {
+        "name": "Bermondsey and Old Southwark",
+        "reg": "E15000007"
+    },
+    "E14000830": {
+        "name": "Newbury",
+        "reg": "E15000008"
+    },
+    "E14001043": {
+        "name": "Wirral South",
+        "reg": "E15000002"
+    },
+    "E14000729": {
+        "name": "Harlow",
+        "reg": "E15000006"
+    },
+    "E14000555": {
+        "name": "Bethnal Green and Bow",
+        "reg": "E15000007"
+    },
+    "E14000864": {
+        "name": "Norwich South",
+        "reg": "E15000006"
+    },
+    "E14000794": {
+        "name": "Liverpool, Walton",
+        "reg": "E15000002"
+    },
+    "E14000678": {
+        "name": "East Devon",
+        "reg": "E15000009"
+    },
+    "E14000752": {
+        "name": "Hornsey and Wood Green",
+        "reg": "E15000007"
+    },
+    "E14000734": {
+        "name": "Harwich and North Essex",
+        "reg": "E15000006"
+    },
+    "E14000791": {
+        "name": "Lichfield",
+        "reg": "E15000005"
+    },
+    "W07000080": {
+        "name": "Cardiff South and Penarth",
+        "reg": "W08000001"
+    },
+    "E14000849": {
+        "name": "North Shropshire",
+        "reg": "E15000005"
+    },
+    "E14001005": {
+        "name": "Twickenham",
+        "reg": "E15000007"
+    },
+    "E14000725": {
+        "name": "Halton",
+        "reg": "E15000002"
+    },
+    "E14000782": {
+        "name": "Leicester East",
+        "reg": "E15000004"
+    },
+    "E14000983": {
+        "name": "Surrey Heath",
+        "reg": "E15000008"
+    },
+    "E14000727": {
+        "name": "Hampstead and Kilburn",
+        "reg": "E15000007"
+    },
+    "E14001032": {
+        "name": "West Ham",
+        "reg": "E15000007"
+    },
+    "E14000777": {
+        "name": "Leeds Central",
+        "reg": "E15000003"
+    },
+    "E14000792": {
+        "name": "Lincoln",
+        "reg": "E15000004"
+    },
+    "E14000681": {
+        "name": "East Surrey",
+        "reg": "E15000008"
+    },
+    "E14000815": {
+        "name": "Mid Dorset and North Poole",
+        "reg": "E15000009"
+    },
+    "E14000904": {
+        "name": "Rotherham",
+        "reg": "E15000003"
+    },
+    "E14000970": {
+        "name": "Stockton North",
+        "reg": "E15000001"
+    },
+    "E14000651": {
+        "name": "Coventry South",
+        "reg": "E15000005"
+    },
+    "E14000748": {
+        "name": "High Peak",
+        "reg": "E15000004"
+    },
+    "E14000930": {
+        "name": "Slough",
+        "reg": "E15000008"
+    },
+    "E14000885": {
+        "name": "Preston",
+        "reg": "E15000002"
+    },
+    "E14000840": {
+        "name": "North Durham",
+        "reg": "E15000001"
+    },
+    "E14000838": {
+        "name": "North Devon",
+        "reg": "E15000009"
+    },
+    "E14001009": {
+        "name": "Wakefield",
+        "reg": "E15000003"
+    },
+    "W07000049": {
+        "name": "Aberavon",
+        "reg": "W08000001"
+    },
+    "E14000724": {
+        "name": "Haltemprice and Howden",
+        "reg": "E15000003"
+    },
+    "E14000640": {
+        "name": "City of Chester",
+        "reg": "E15000002"
+    },
+    "E14000653": {
+        "name": "Crewe and Nantwich",
+        "reg": "E15000002"
+    },
+    "E14000795": {
+        "name": "Liverpool, Wavertree",
+        "reg": "E15000002"
+    },
+    "W07000079": {
+        "name": "Cardiff West",
+        "reg": "W08000001"
+    },
+    "E14000753": {
+        "name": "Horsham",
+        "reg": "E15000008"
+    },
+    "E14000773": {
+        "name": "Kingston upon Hull West and Hessle",
+        "reg": "E15000003"
+    },
+    "E14000850": {
+        "name": "North Somerset",
+        "reg": "E15000009"
+    },
+    "E14000991": {
+        "name": "The Cotswolds",
+        "reg": "E15000009"
+    },
+    "E14000696": {
+        "name": "Erith and Thamesmead",
+        "reg": "E15000007"
+    },
+    "E14001039": {
+        "name": "Wigan",
+        "reg": "E15000002"
+    },
+    "E14000736": {
+        "name": "Havant",
+        "reg": "E15000008"
+    },
+    "E14000578": {
+        "name": "Bolton North East",
+        "reg": "E15000002"
+    },
+    "E14000805": {
+        "name": "Makerfield",
+        "reg": "E15000002"
+    },
+    "E14000609": {
+        "name": "Burnley",
+        "reg": "E15000002"
+    },
+    "E14000565": {
+        "name": "Birmingham, Northfield",
+        "reg": "E15000005"
+    },
+    "E14001044": {
+        "name": "Wirral West",
+        "reg": "E15000002"
+    },
+    "E14000986": {
+        "name": "Tamworth",
+        "reg": "E15000005"
+    },
+    "E14000831": {
+        "name": "Newcastle upon Tyne Central",
+        "reg": "E15000001"
+    },
+    "E14000766": {
+        "name": "Keighley",
+        "reg": "E15000003"
+    },
+    "W07000043": {
+        "name": "Alyn and Deeside",
+        "reg": "W08000001"
+    },
+    "E14000992": {
+        "name": "The Wrekin",
+        "reg": "E15000005"
+    },
+    "E14000702": {
+        "name": "Filton and Bradley Stoke",
+        "reg": "E15000009"
+    },
+    "E14000889": {
+        "name": "Reading East",
+        "reg": "E15000008"
+    },
+    "E14000977": {
+        "name": "Stratford-on-Avon",
+        "reg": "E15000005"
+    },
+    "E14000808": {
+        "name": "Manchester, Gorton",
+        "reg": "E15000002"
+    },
+    "E14001036": {
+        "name": "Westminster North",
+        "reg": "E15000007"
+    },
+    "E14000625": {
+        "name": "Charnwood",
+        "reg": "E15000004"
+    },
+    "E14000697": {
+        "name": "Esher and Walton",
+        "reg": "E15000008"
+    },
+    "E14000570": {
+        "name": "Blackburn",
+        "reg": "E15000002"
+    },
+    "E14000872": {
+        "name": "Orpington",
+        "reg": "E15000007"
+    },
+    "E14000781": {
+        "name": "Leeds West",
+        "reg": "E15000003"
+    },
+    "E14000959": {
+        "name": "Spelthorne",
+        "reg": "E15000008"
+    },
+    "E14000897": {
+        "name": "Rochdale",
+        "reg": "E15000002"
+    },
+    "E14000604": {
+        "name": "Bromley and Chislehurst",
+        "reg": "E15000007"
+    },
+    "E14000712": {
+        "name": "Gloucester",
+        "reg": "E15000009"
+    },
+    "W07000078": {
+        "name": "Vale of Glamorgan",
+        "reg": "W08000001"
+    },
+    "E14000949": {
+        "name": "South West Bedfordshire",
+        "reg": "E15000006"
+    },
+    "E14000635": {
+        "name": "Chippenham",
+        "reg": "E15000009"
+    },
+    "E14000574": {
+        "name": "Blaydon",
+        "reg": "E15000001"
+    },
+    "E14000560": {
+        "name": "Birmingham, Edgbaston",
+        "reg": "E15000005"
+    },
+    "E14001026": {
+        "name": "Wells",
+        "reg": "E15000009"
+    },
+    "E14000695": {
+        "name": "Erewash",
+        "reg": "E15000004"
+    },
+    "E14000846": {
+        "name": "North East Somerset",
+        "reg": "E15000009"
+    },
+    "E14000764": {
+        "name": "Islington South and Finsbury",
+        "reg": "E15000007"
+    },
+    "E14000945": {
+        "name": "South Staffordshire",
+        "reg": "E15000005"
+    },
+    "E14000969": {
+        "name": "Stockport",
+        "reg": "E15000002"
+    },
+    "E14000613": {
+        "name": "Bury St Edmunds",
+        "reg": "E15000006"
+    },
+    "E14001010": {
+        "name": "Wallasey",
+        "reg": "E15000002"
+    },
+    "W07000061": {
+        "name": "Dwyfor Meirionnydd",
+        "reg": "W08000001"
+    },
+    "E14000821": {
+        "name": "Milton Keynes North",
+        "reg": "E15000008"
+    },
+    "E14000749": {
+        "name": "Hitchin and Harpenden",
+        "reg": "E15000006"
+    },
+    "E14000996": {
+        "name": "Tiverton and Honiton",
+        "reg": "E15000009"
+    },
+    "E14000618": {
+        "name": "Cannock Chase",
+        "reg": "E15000005"
+    },
+    "E14000817": {
+        "name": "Mid Sussex",
+        "reg": "E15000008"
+    },
+    "E14000995": {
+        "name": "Thurrock",
+        "reg": "E15000006"
+    },
+    "E14000631": {
+        "name": "Chesham and Amersham",
+        "reg": "E15000008"
+    },
+    "E14000626": {
+        "name": "Chatham and Aylesford",
+        "reg": "E15000008"
+    },
+    "W07000062": {
+        "name": "Clwyd South",
+        "reg": "W08000001"
+    },
+    "E14000548": {
+        "name": "Batley and Spen",
+        "reg": "E15000003"
+    },
+    "E14000589": {
+        "name": "Bradford West",
+        "reg": "E15000003"
+    },
+    "E14000804": {
+        "name": "Maidstone and The Weald",
+        "reg": "E15000008"
+    },
+    "E14000556": {
+        "name": "Beverley and Holderness",
+        "reg": "E15000003"
+    },
+    "E14000854": {
+        "name": "North Warwickshire",
+        "reg": "E15000005"
+    },
+    "E14000587": {
+        "name": "Bradford East",
+        "reg": "E15000003"
+    },
+    "E14000645": {
+        "name": "Colne Valley",
+        "reg": "E15000003"
+    },
+    "E14000841": {
+        "name": "North East Bedfordshire",
+        "reg": "E15000006"
+    },
+    "E14000544": {
+        "name": "Basildon and Billericay",
+        "reg": "E15000006"
+    },
+    "E14000707": {
+        "name": "Gainsborough",
+        "reg": "E15000004"
+    },
+    "E14000733": {
+        "name": "Hartlepool",
+        "reg": "E15000001"
+    },
+    "E14001000": {
+        "name": "Torridge and West Devon",
+        "reg": "E15000009"
+    },
+    "E14000784": {
+        "name": "Leicester West",
+        "reg": "E15000004"
+    },
+    "E14000692": {
+        "name": "Enfield, Southgate",
+        "reg": "E15000007"
+    },
+    "E14000863": {
+        "name": "Norwich North",
+        "reg": "E15000006"
+    },
+    "E14000853": {
+        "name": "North Tyneside",
+        "reg": "E15000001"
+    },
+    "E14000976": {
+        "name": "Stourbridge",
+        "reg": "E15000005"
+    },
+    "E14000685": {
+        "name": "Eastleigh",
+        "reg": "E15000008"
+    },
+    "E14000532": {
+        "name": "Altrincham and Sale West",
+        "reg": "E15000002"
+    },
+    "E14001058": {
+        "name": "Wyre Forest",
+        "reg": "E15000005"
+    },
+    "E14001045": {
+        "name": "Witham",
+        "reg": "E15000006"
+    },
+    "E14000988": {
+        "name": "Taunton Deane",
+        "reg": "E15000009"
+    },
+    "E14000638": {
+        "name": "Christchurch",
+        "reg": "E15000009"
+    },
+    "W07000044": {
+        "name": "Wrexham",
+        "reg": "W08000001"
+    },
+    "E14000845": {
+        "name": "North East Hertfordshire",
+        "reg": "E15000006"
+    },
+    "E14000580": {
+        "name": "Bolton West",
+        "reg": "E15000002"
+    },
+    "E14000743": {
+        "name": "Hereford and South Herefordshire",
+        "reg": "E15000005"
+    },
+    "E14000958": {
+        "name": "Southport",
+        "reg": "E15000002"
+    },
+    "E14000581": {
+        "name": "Bootle",
+        "reg": "E15000002"
+    },
+    "E14000972": {
+        "name": "Stoke-on-Trent Central",
+        "reg": "E15000005"
+    },
+    "E14000888": {
+        "name": "Rayleigh and Wickford",
+        "reg": "E15000006"
+    },
+    "E14000746": {
+        "name": "Hexham",
+        "reg": "E15000001"
+    },
+    "E14000616": {
+        "name": "Camborne and Redruth",
+        "reg": "E15000009"
+    },
+    "E14001029": {
+        "name": "West Bromwich East",
+        "reg": "E15000005"
+    },
+    "E14000644": {
+        "name": "Colchester",
+        "reg": "E15000006"
+    },
+    "E14000799": {
+        "name": "Ludlow",
+        "reg": "E15000005"
+    },
+    "E14000883": {
+        "name": "Portsmouth North",
+        "reg": "E15000008"
+    },
+    "E14001048": {
+        "name": "Wokingham",
+        "reg": "E15000008"
+    },
+    "E14000811": {
+        "name": "Meon Valley",
+        "reg": "E15000008"
+    },
+    "E14000726": {
+        "name": "Hammersmith",
+        "reg": "E15000007"
+    },
+    "E14001017": {
+        "name": "Warrington North",
+        "reg": "E15000002"
+    },
+    "E14001060": {
+        "name": "Yeovil",
+        "reg": "E15000009"
+    },
+    "E14000629": {
+        "name": "Chelsea and Fulham",
+        "reg": "E15000007"
+    },
+    "E14000837": {
+        "name": "North Cornwall",
+        "reg": "E15000009"
+    },
+    "E14000806": {
+        "name": "Maldon",
+        "reg": "E15000006"
+    },
+    "E14000843": {
+        "name": "North East Derbyshire",
+        "reg": "E15000004"
+    },
+    "E14000586": {
+        "name": "Bracknell",
+        "reg": "E15000008"
+    },
+    "E14000703": {
+        "name": "Finchley and Golders Green",
+        "reg": "E15000007"
+    },
+    "E14001057": {
+        "name": "Wyre and Preston North",
+        "reg": "E15000002"
+    },
+    "E14000583": {
+        "name": "Bosworth",
+        "reg": "E15000004"
+    },
+    "E14000844": {
+        "name": "North East Hampshire",
+        "reg": "E15000008"
+    },
+    "E14000759": {
+        "name": "Ilford North",
+        "reg": "E15000007"
+    },
+    "E14000985": {
+        "name": "Sutton Coldfield",
+        "reg": "E15000005"
+    },
+    "E14000978": {
+        "name": "Streatham",
+        "reg": "E15000007"
+    },
+    "E14000558": {
+        "name": "Bexleyheath and Crayford",
+        "reg": "E15000007"
+    },
+    "E14000668": {
+        "name": "Doncaster Central",
+        "reg": "E15000003"
+    },
+    "E14000929": {
+        "name": "Sleaford and North Hykeham",
+        "reg": "E15000004"
+    },
+    "E14000906": {
+        "name": "Ruislip, Northwood and Pinner",
+        "reg": "E15000007"
+    },
+    "E14000708": {
+        "name": "Garston and Halewood",
+        "reg": "E15000002"
+    },
+    "E14000537": {
+        "name": "Ashton-under-Lyne",
+        "reg": "E15000002"
+    },
+    "E14000606": {
+        "name": "Broxbourne",
+        "reg": "E15000006"
+    },
+    "E14000796": {
+        "name": "Liverpool, West Derby",
+        "reg": "E15000002"
+    },
+    "E14000534": {
+        "name": "Arundel and South Downs",
+        "reg": "E15000008"
+    },
+    "E14001030": {
+        "name": "West Bromwich West",
+        "reg": "E15000005"
+    },
+    "E14000870": {
+        "name": "Oldham East and Saddleworth",
+        "reg": "E15000002"
+    },
+    "E14000735": {
+        "name": "Hastings and Rye",
+        "reg": "E15000008"
+    },
+    "E14000672": {
+        "name": "Dudley South",
+        "reg": "E15000005"
+    },
+    "E14001023": {
+        "name": "Wealden",
+        "reg": "E15000008"
+    },
+    "E14000538": {
+        "name": "Aylesbury",
+        "reg": "E15000008"
+    },
+    "E14000571": {
+        "name": "Blackley and Broughton",
+        "reg": "E15000002"
+    },
+    "W07000076": {
+        "name": "Caerphilly",
+        "reg": "W08000001"
+    },
+    "E14000617": {
+        "name": "Cambridge",
+        "reg": "E15000006"
+    },
+    "E14000667": {
+        "name": "Don Valley",
+        "reg": "E15000003"
+    },
+    "E14000590": {
+        "name": "Braintree",
+        "reg": "E15000006"
+    },
+    "E14000599": {
+        "name": "Bristol East",
+        "reg": "E15000009"
+    },
+    "E14000859": {
+        "name": "North West Norfolk",
+        "reg": "E15000006"
+    },
+    "E14000671": {
+        "name": "Dudley North",
+        "reg": "E15000005"
+    },
+    "E14000694": {
+        "name": "Epsom and Ewell",
+        "reg": "E15000008"
+    },
+    "E14000620": {
+        "name": "Carlisle",
+        "reg": "E15000002"
+    },
+    "E14000956": {
+        "name": "Southampton, Test",
+        "reg": "E15000008"
+    },
+    "E14000717": {
+        "name": "Great Yarmouth",
+        "reg": "E15000006"
+    },
+    "E14000957": {
+        "name": "Southend West",
+        "reg": "E15000006"
+    },
+    "E14000877": {
+        "name": "Penrith and The Border",
+        "reg": "E15000002"
+    },
+    "E14000982": {
+        "name": "Sunderland Central",
+        "reg": "E15000001"
+    },
+    "E14000701": {
+        "name": "Feltham and Heston",
+        "reg": "E15000007"
+    },
+    "E14000901": {
+        "name": "Romsey and Southampton North",
+        "reg": "E15000008"
+    },
+    "E14001051": {
+        "name": "Wolverhampton South West",
+        "reg": "E15000005"
+    },
+    "E14001035": {
+        "name": "West Worcestershire",
+        "reg": "E15000005"
+    },
+    "E14000547": {
+        "name": "Bath",
+        "reg": "E15000009"
+    },
+    "E14000981": {
+        "name": "Suffolk Coastal",
+        "reg": "E15000006"
+    },
+    "E14000677": {
+        "name": "Easington",
+        "reg": "E15000001"
+    },
+    "E14001015": {
+        "name": "Wantage",
+        "reg": "E15000008"
+    },
+    "E14000862": {
+        "name": "Northampton South",
+        "reg": "E15000004"
+    },
+    "E14000607": {
+        "name": "Broxtowe",
+        "reg": "E15000004"
+    },
+    "W07000067": {
+        "name": "Carmarthen East and Dinefwr",
+        "reg": "W08000001"
+    },
+    "E14000899": {
+        "name": "Rochford and Southend East",
+        "reg": "E15000006"
+    },
+    "E14000818": {
+        "name": "Mid Worcestershire",
+        "reg": "E15000005"
+    },
+    "E14000893": {
+        "name": "Reigate",
+        "reg": "E15000008"
+    },
+    "E14000935": {
+        "name": "South Derbyshire",
+        "reg": "E15000004"
+    },
+    "E14000722": {
+        "name": "Halesowen and Rowley Regis",
+        "reg": "E15000005"
+    },
+    "E14000657": {
+        "name": "Dagenham and Rainham",
+        "reg": "E15000007"
+    },
+    "E14000611": {
+        "name": "Bury North",
+        "reg": "E15000002"
+    },
+    "E14000624": {
+        "name": "Central Suffolk and North Ipswich",
+        "reg": "E15000006"
+    },
+    "E14001033": {
+        "name": "West Lancashire",
+        "reg": "E15000002"
+    },
+    "E14000980": {
+        "name": "Stroud",
+        "reg": "E15000009"
+    },
+    "E14000761": {
+        "name": "Ipswich",
+        "reg": "E15000006"
+    },
+    "W07000066": {
+        "name": "Carmarthen West and South Pembrokeshire",
+        "reg": "W08000001"
+    },
+    "E14000637": {
+        "name": "Chorley",
+        "reg": "E15000002"
+    },
+    "E14000989": {
+        "name": "Telford",
+        "reg": "E15000005"
+    },
+    "E14000785": {
+        "name": "Leigh",
+        "reg": "E15000002"
+    },
+    "W07000072": {
+        "name": "Blaenau Gwent",
+        "reg": "W08000001"
+    },
+    "E14000552": {
+        "name": "Bedford",
+        "reg": "E15000006"
+    },
+    "E14000809": {
+        "name": "Manchester, Withington",
+        "reg": "E15000002"
+    },
+    "E14000908": {
+        "name": "Rushcliffe",
+        "reg": "E15000004"
+    },
+    "E14000595": {
+        "name": "Bridgwater and West Somerset",
+        "reg": "E15000009"
+    },
+    "E14000772": {
+        "name": "Kingston upon Hull North",
+        "reg": "E15000003"
+    },
+    "E14000602": {
+        "name": "Bristol West",
+        "reg": "E15000009"
+    },
+    "E14000974": {
+        "name": "Stoke-on-Trent South",
+        "reg": "E15000005"
+    },
+    "E14000884": {
+        "name": "Portsmouth South",
+        "reg": "E15000008"
+    },
+    "E14000990": {
+        "name": "Tewkesbury",
+        "reg": "E15000009"
+    },
+    "E14000771": {
+        "name": "Kingston upon Hull East",
+        "reg": "E15000003"
+    },
+    "E14000783": {
+        "name": "Leicester South",
+        "reg": "E15000004"
+    },
+    "E14000682": {
+        "name": "East Worthing and Shoreham",
+        "reg": "E15000008"
+    },
+    "E14000900": {
+        "name": "Romford",
+        "reg": "E15000007"
+    },
+    "E14000622": {
+        "name": "Castle Point",
+        "reg": "E15000006"
+    },
+    "W07000055": {
+        "name": "Newport East",
+        "reg": "W08000001"
+    },
+    "E14000670": {
+        "name": "Dover",
+        "reg": "E15000008"
+    },
+    "E14000767": {
+        "name": "Kenilworth and Southam",
+        "reg": "E15000005"
+    },
+    "E14000747": {
+        "name": "Heywood and Middleton",
+        "reg": "E15000002"
+    },
+    "E14000880": {
+        "name": "Plymouth, Sutton and Devonport",
+        "reg": "E15000009"
+    },
+    "E14000941": {
+        "name": "South Norfolk",
+        "reg": "E15000006"
+    },
+    "E14000942": {
+        "name": "South Northamptonshire",
+        "reg": "E15000004"
+    },
+    "E14000582": {
+        "name": "Boston and Skegness",
+        "reg": "E15000004"
+    },
+    "E14000997": {
+        "name": "Tonbridge and Malling",
+        "reg": "E15000008"
+    },
+    "E14000786": {
+        "name": "Lewes",
+        "reg": "E15000008"
+    },
+    "E14000918": {
+        "name": "Sevenoaks",
+        "reg": "E15000008"
+    },
+    "E14000967": {
+        "name": "Stalybridge and Hyde",
+        "reg": "E15000002"
+    },
+    "E14001050": {
+        "name": "Wolverhampton South East",
+        "reg": "E15000005"
+    },
+    "E14001027": {
+        "name": "Welwyn Hatfield",
+        "reg": "E15000006"
+    },
+    "E14000858": {
+        "name": "North West Leicestershire",
+        "reg": "E15000004"
+    },
+    "E14000966": {
+        "name": "Staffordshire Moorlands",
+        "reg": "E15000005"
+    },
+    "E14000661": {
+        "name": "Denton and Reddish",
+        "reg": "E15000002"
+    },
+    "E14000984": {
+        "name": "Sutton and Cheam",
+        "reg": "E15000007"
+    },
+    "W07000041": {
+        "name": "Ynys M\u015bn",
+        "reg": "W08000001"
+    },
+    "E14001056": {
+        "name": "Wycombe",
+        "reg": "E15000008"
+    },
+    "E14000597": {
+        "name": "Brighton, Kemptown",
+        "reg": "E15000008"
+    },
+    "E14000615": {
+        "name": "Camberwell and Peckham",
+        "reg": "E15000007"
+    },
+    "E14000836": {
+        "name": "Normanton, Pontefract and Castleford",
+        "reg": "E15000003"
+    },
+    "E14000549": {
+        "name": "Battersea",
+        "reg": "E15000007"
+    },
+    "E14000700": {
+        "name": "Faversham and Mid Kent",
+        "reg": "E15000008"
+    },
+    "E14000684": {
+        "name": "Eastbourne",
+        "reg": "E15000008"
+    },
+    "E14000931": {
+        "name": "Solihull",
+        "reg": "E15000005"
+    },
+    "E14000954": {
+        "name": "South West Wiltshire",
+        "reg": "E15000009"
+    },
+    "E14001006": {
+        "name": "Tynemouth",
+        "reg": "E15000001"
+    },
+    "E14000642": {
+        "name": "Clacton",
+        "reg": "E15000006"
+    },
+    "E14000902": {
+        "name": "Rossendale and Darwen",
+        "reg": "E15000002"
+    },
+    "E14000961": {
+        "name": "St Austell and Newquay",
+        "reg": "E15000009"
+    },
+    "E14000647": {
+        "name": "Copeland",
+        "reg": "E15000002"
+    },
+    "E14000915": {
+        "name": "Sedgefield",
+        "reg": "E15000001"
+    },
+    "E14000919": {
+        "name": "Sheffield Central",
+        "reg": "E15000003"
+    },
+    "E14000925": {
+        "name": "Shipley",
+        "reg": "E15000003"
+    },
+    "E14000953": {
+        "name": "South West Surrey",
+        "reg": "E15000008"
+    },
+    "E14000641": {
+        "name": "City of Durham",
+        "reg": "E15000001"
+    },
+    "E14000797": {
+        "name": "Loughborough",
+        "reg": "E15000004"
+    },
+    "E14000875": {
+        "name": "Pendle",
+        "reg": "E15000002"
+    },
+    "E14000779": {
+        "name": "Leeds North East",
+        "reg": "E15000003"
+    },
+    "E14000533": {
+        "name": "Amber Valley",
+        "reg": "E15000004"
+    },
+    "E14000731": {
+        "name": "Harrow East",
+        "reg": "E15000007"
+    },
+    "W07000068": {
+        "name": "Brecon and Radnorshire",
+        "reg": "W08000001"
+    },
+    "E14000896": {
+        "name": "Richmond Park",
+        "reg": "E15000007"
+    },
+    "E14000852": {
+        "name": "North Thanet",
+        "reg": "E15000008"
+    },
+    "E14000770": {
+        "name": "Kingston and Surbiton",
+        "reg": "E15000007"
+    },
+    "E14001018": {
+        "name": "Warrington South",
+        "reg": "E15000002"
+    },
+    "E14000819": {
+        "name": "Middlesbrough",
+        "reg": "E15000001"
+    },
+    "E14000842": {
+        "name": "North East Cambridgeshire",
+        "reg": "E15000006"
+    },
+    "E14000600": {
+        "name": "Bristol North West",
+        "reg": "E15000009"
+    },
+    "E14001038": {
+        "name": "Weston-Super-Mare",
+        "reg": "E15000009"
+    },
+    "E14000730": {
+        "name": "Harrogate and Knaresborough",
+        "reg": "E15000003"
+    },
+    "E14000646": {
+        "name": "Congleton",
+        "reg": "E15000002"
+    },
+    "E14001031": {
+        "name": "West Dorset",
+        "reg": "E15000009"
+    },
+    "E14000944": {
+        "name": "South Shields",
+        "reg": "E15000001"
+    },
+    "E14000591": {
+        "name": "Brent Central",
+        "reg": "E15000007"
+    },
+    "E14000623": {
+        "name": "Central Devon",
+        "reg": "E15000009"
+    },
+    "E14000963": {
+        "name": "St Helens South and Whiston",
+        "reg": "E15000002"
+    },
+    "W07000074": {
+        "name": "Ogmore",
+        "reg": "W08000001"
+    },
+    "E14000816": {
+        "name": "Mid Norfolk",
+        "reg": "E15000006"
+    },
+    "E14000867": {
+        "name": "Nottingham South",
+        "reg": "E15000004"
+    },
+    "E14000698": {
+        "name": "Exeter",
+        "reg": "E15000009"
+    },
+    "E14000921": {
+        "name": "Sheffield, Brightside and Hillsborough",
+        "reg": "E15000003"
+    },
+    "E14000659": {
+        "name": "Dartford",
+        "reg": "E15000008"
+    },
+    "E14000810": {
+        "name": "Mansfield",
+        "reg": "E15000004"
+    },
+    "E14000758": {
+        "name": "Hyndburn",
+        "reg": "E15000002"
+    },
+    "E14001062": {
+        "name": "York Outer",
+        "reg": "E15000003"
+    },
+    "E14001028": {
+        "name": "Wentworth and Dearne",
+        "reg": "E15000003"
+    },
+    "E14000861": {
+        "name": "Northampton North",
+        "reg": "E15000004"
+    },
+    "E14000882": {
+        "name": "Poplar and Limehouse",
+        "reg": "E15000007"
+    },
+    "E14001059": {
+        "name": "Wythenshawe and Sale East",
+        "reg": "E15000002"
+    },
+    "E14000741": {
+        "name": "Hendon",
+        "reg": "E15000007"
+    },
+    "E14000765": {
+        "name": "Jarrow",
+        "reg": "E15000001"
+    },
+    "E14001061": {
+        "name": "York Central",
+        "reg": "E15000003"
+    },
+    "E14000856": {
+        "name": "North West Durham",
+        "reg": "E15000001"
+    },
+    "E14000579": {
+        "name": "Bolton South East",
+        "reg": "E15000002"
+    },
+    "E14000676": {
+        "name": "Ealing, Southall",
+        "reg": "E15000007"
+    },
+    "E14000577": {
+        "name": "Bolsover",
+        "reg": "E15000004"
+    },
+    "E14000826": {
+        "name": "Morley and Outwood",
+        "reg": "E15000003"
+    },
+    "E14000999": {
+        "name": "Torbay",
+        "reg": "E15000009"
+    },
+    "E14000778": {
+        "name": "Leeds East",
+        "reg": "E15000003"
+    },
+    "E14000939": {
+        "name": "South Holland and The Deepings",
+        "reg": "E15000004"
+    },
+    "E14001016": {
+        "name": "Warley",
+        "reg": "E15000005"
+    },
+    "E14000952": {
+        "name": "South West Norfolk",
+        "reg": "E15000006"
+    },
+    "E14000742": {
+        "name": "Henley",
+        "reg": "E15000008"
+    },
+    "E14000675": {
+        "name": "Ealing North",
+        "reg": "E15000007"
+    },
+    "E14000891": {
+        "name": "Redcar",
+        "reg": "E15000001"
+    },
+    "E14000584": {
+        "name": "Bournemouth East",
+        "reg": "E15000009"
+    },
+    "W07000057": {
+        "name": "Arfon",
+        "reg": "W08000001"
+    },
+    "E14000788": {
+        "name": "Lewisham West and Penge",
+        "reg": "E15000007"
+    },
+    "E14000876": {
+        "name": "Penistone and Stocksbridge",
+        "reg": "E15000003"
+    },
+    "E14000903": {
+        "name": "Rother Valley",
+        "reg": "E15000003"
+    },
+    "E14000754": {
+        "name": "Houghton and Sunderland South",
+        "reg": "E15000001"
+    },
+    "E14000679": {
+        "name": "East Ham",
+        "reg": "E15000007"
+    },
+    "E14000656": {
+        "name": "Croydon South",
+        "reg": "E15000007"
+    },
+    "E14000643": {
+        "name": "Cleethorpes",
+        "reg": "E15000003"
+    },
+    "E14000924": {
+        "name": "Sherwood",
+        "reg": "E15000004"
+    },
+    "E14000572": {
+        "name": "Blackpool North and Cleveleys",
+        "reg": "E15000002"
+    },
+    "E14000878": {
+        "name": "Peterborough",
+        "reg": "E15000006"
+    },
+    "E14000824": {
+        "name": "Mole Valley",
+        "reg": "E15000008"
+    },
+    "E14000739": {
+        "name": "Hemel Hempstead",
+        "reg": "E15000006"
+    },
+    "E14000865": {
+        "name": "Nottingham East",
+        "reg": "E15000004"
+    },
+    "E14000947": {
+        "name": "South Swindon",
+        "reg": "E15000009"
+    },
+    "E14000757": {
+        "name": "Huntingdon",
+        "reg": "E15000006"
+    },
+    "E14000655": {
+        "name": "Croydon North",
+        "reg": "E15000007"
+    },
+    "E14001055": {
+        "name": "Worthing West",
+        "reg": "E15000008"
+    },
+    "E14000827": {
+        "name": "New Forest East",
+        "reg": "E15000008"
+    },
+    "E14000968": {
+        "name": "Stevenage",
+        "reg": "E15000006"
+    },
+    "E14000750": {
+        "name": "Holborn and St Pancras",
+        "reg": "E15000007"
+    },
+    "E14000866": {
+        "name": "Nottingham North",
+        "reg": "E15000004"
+    },
+    "E14000662": {
+        "name": "Derby North",
+        "reg": "E15000004"
+    },
+    "E14000721": {
+        "name": "Hackney South and Shoreditch",
+        "reg": "E15000007"
+    },
+    "E14001014": {
+        "name": "Wansbeck",
+        "reg": "E15000001"
+    },
+    "E14000760": {
+        "name": "Ilford South",
+        "reg": "E15000007"
+    },
+    "E14000886": {
+        "name": "Pudsey",
+        "reg": "E15000003"
+    },
+    "W07000077": {
+        "name": "Islwyn",
+        "reg": "W08000001"
+    },
+    "E14000601": {
+        "name": "Bristol South",
+        "reg": "E15000009"
+    },
+    "E14000868": {
+        "name": "Nuneaton",
+        "reg": "E15000005"
+    },
+    "W07000051": {
+        "name": "Cardiff North",
+        "reg": "W08000001"
+    },
+    "E14000713": {
+        "name": "Gosport",
+        "reg": "E15000008"
+    },
+    "E14000835": {
+        "name": "Newton Abbot",
+        "reg": "E15000009"
+    },
+    "E14000666": {
+        "name": "Dewsbury",
+        "reg": "E15000003"
+    },
+    "E14000881": {
+        "name": "Poole",
+        "reg": "E15000009"
+    },
+    "W07000063": {
+        "name": "Montgomeryshire",
+        "reg": "W08000001"
+    },
+    "E14000751": {
+        "name": "Hornchurch and Upminster",
+        "reg": "E15000007"
+    },
+    "E14000596": {
+        "name": "Brigg and Goole",
+        "reg": "E15000003"
+    },
+    "E14001041": {
+        "name": "Winchester",
+        "reg": "E15000008"
+    },
+    "E14000723": {
+        "name": "Halifax",
+        "reg": "E15000003"
+    },
+    "E14000907": {
+        "name": "Runnymede and Weybridge",
+        "reg": "E15000008"
+    },
+    "E14000614": {
+        "name": "Calder Valley",
+        "reg": "E15000003"
+    },
+    "E14000913": {
+        "name": "Scarborough and Whitby",
+        "reg": "E15000003"
+    },
+    "E14000920": {
+        "name": "Sheffield South East",
+        "reg": "E15000003"
+    },
+    "E14000535": {
+        "name": "Ashfield",
+        "reg": "E15000004"
+    },
+    "E14000855": {
+        "name": "North West Cambridgeshire",
+        "reg": "E15000006"
+    },
+    "E14000652": {
+        "name": "Crawley",
+        "reg": "E15000008"
+    },
+    "E14000895": {
+        "name": "Richmond (Yorks)",
+        "reg": "E15000003"
+    },
+    "E14000639": {
+        "name": "Cities of London and Westminster",
+        "reg": "E15000007"
+    },
+    "W07000045": {
+        "name": "Llanelli",
+        "reg": "W08000001"
+    },
+    "W07000060": {
+        "name": "Vale of Clwyd",
+        "reg": "W08000001"
+    },
+    "E14001020": {
+        "name": "Washington and Sunderland West",
+        "reg": "E15000001"
+    },
+    "E14000950": {
+        "name": "South West Devon",
+        "reg": "E15000009"
+    },
+    "E14000665": {
+        "name": "Devizes",
+        "reg": "E15000009"
+    },
+    "W07000056": {
+        "name": "Newport West",
+        "reg": "W08000001"
+    },
+    "E14000594": {
+        "name": "Brentwood and Ongar",
+        "reg": "E15000006"
+    },
+    "E14000704": {
+        "name": "Folkestone and Hythe",
+        "reg": "E15000008"
+    },
+    "E14000833": {
+        "name": "Newcastle upon Tyne North",
+        "reg": "E15000001"
+    },
+    "E14000715": {
+        "name": "Gravesham",
+        "reg": "E15000008"
+    },
+    "E14000550": {
+        "name": "Beaconsfield",
+        "reg": "E15000008"
+    },
+    "E14000605": {
+        "name": "Bromsgrove",
+        "reg": "E15000005"
+    },
+    "E14000898": {
+        "name": "Rochester and Strood",
+        "reg": "E15000008"
+    },
+    "E14000998": {
+        "name": "Tooting",
+        "reg": "E15000007"
+    },
+    "E14000813": {
+        "name": "Mid Bedfordshire",
+        "reg": "E15000006"
+    },
+    "E14000932": {
+        "name": "Somerton and Frome",
+        "reg": "E15000009"
+    },
+    "E14000632": {
+        "name": "Chesterfield",
+        "reg": "E15000004"
+    },
+    "W07000071": {
+        "name": "Merthyr Tydfil and Rhymney",
+        "reg": "W08000001"
+    },
+    "E14001004": {
+        "name": "Tunbridge Wells",
+        "reg": "E15000008"
+    },
+    "E14000545": {
+        "name": "Basingstoke",
+        "reg": "E15000008"
+    },
+    "E14000790": {
+        "name": "Leyton and Wanstead",
+        "reg": "E15000007"
+    },
+    "E14000917": {
+        "name": "Selby and Ainsty",
+        "reg": "E15000003"
+    },
+    "E14000716": {
+        "name": "Great Grimsby",
+        "reg": "E15000003"
+    },
+    "E14000689": {
+        "name": "Elmet and Rothwell",
+        "reg": "E15000003"
+    },
+    "E14000936": {
+        "name": "South Dorset",
+        "reg": "E15000009"
+    },
+    "E14000585": {
+        "name": "Bournemouth West",
+        "reg": "E15000009"
+    },
+    "E14000634": {
+        "name": "Chingford and Woodford Green",
+        "reg": "E15000007"
+    },
+    "E14000802": {
+        "name": "Macclesfield",
+        "reg": "E15000002"
+    },
+    "E14000588": {
+        "name": "Bradford South",
+        "reg": "E15000003"
+    },
+    "E14000807": {
+        "name": "Manchester Central",
+        "reg": "E15000002"
+    },
+    "E14000630": {
+        "name": "Cheltenham",
+        "reg": "E15000009"
+    },
+    "E14001025": {
+        "name": "Wellingborough",
+        "reg": "E15000004"
+    },
+    "E14000745": {
+        "name": "Hertsmere",
+        "reg": "E15000006"
+    },
+    "E14001052": {
+        "name": "Worcester",
+        "reg": "E15000005"
+    },
+    "E14000965": {
+        "name": "Stafford",
+        "reg": "E15000005"
+    },
+    "E14000576": {
+        "name": "Bognor Regis and Littlehampton",
+        "reg": "E15000008"
+    },
+    "W07000070": {
+        "name": "Cynon Valley",
+        "reg": "W08000001"
+    },
+    "E14000568": {
+        "name": "Birmingham, Yardley",
+        "reg": "E15000005"
+    },
+    "W07000065": {
+        "name": "Preseli Pembrokeshire",
+        "reg": "W08000001"
+    },
+    "E14000793": {
+        "name": "Liverpool, Riverside",
+        "reg": "E15000002"
+    },
+    "E14000780": {
+        "name": "Leeds North West",
+        "reg": "E15000003"
+    },
+    "E14001021": {
+        "name": "Watford",
+        "reg": "E15000006"
+    },
+    "E14000943": {
+        "name": "South Ribble",
+        "reg": "E15000002"
+    },
+    "E14000955": {
+        "name": "Southampton, Itchen",
+        "reg": "E15000008"
+    },
+    "E14000948": {
+        "name": "South Thanet",
+        "reg": "E15000008"
+    },
+    "E14000546": {
+        "name": "Bassetlaw",
+        "reg": "E15000004"
+    },
+    "E14001049": {
+        "name": "Wolverhampton North East",
+        "reg": "E15000005"
+    },
+    "E14000718": {
+        "name": "Greenwich and Woolwich",
+        "reg": "E15000007"
+    },
+    "E14000933": {
+        "name": "South Basildon and East Thurrock",
+        "reg": "E15000006"
+    },
+    "E14000720": {
+        "name": "Hackney North and Stoke Newington",
+        "reg": "E15000007"
+    },
+    "E14000542": {
+        "name": "Barnsley East",
+        "reg": "E15000003"
+    },
+    "W07000073": {
+        "name": "Bridgend",
+        "reg": "W08000001"
+    },
+    "E14000603": {
+        "name": "Broadland",
+        "reg": "E15000006"
+    },
+    "E14000912": {
+        "name": "Salisbury",
+        "reg": "E15000009"
+    },
+    "E14000979": {
+        "name": "Stretford and Urmston",
+        "reg": "E15000002"
+    },
+    "E14000554": {
+        "name": "Berwick-upon-Tweed",
+        "reg": "E15000001"
+    },
+    "E14000567": {
+        "name": "Birmingham, Selly Oak",
+        "reg": "E15000005"
+    },
+    "E14000971": {
+        "name": "Stockton South",
+        "reg": "E15000001"
+    },
+    "E14001002": {
+        "name": "Tottenham",
+        "reg": "E15000007"
+    },
+    "W07000046": {
+        "name": "Gower",
+        "reg": "W08000001"
+    },
+    "E14000923": {
+        "name": "Sheffield, Heeley",
+        "reg": "E15000003"
+    },
+    "E14000762": {
+        "name": "Isle of Wight",
+        "reg": "E15000008"
+    },
+    "E14001013": {
+        "name": "Walthamstow",
+        "reg": "E15000007"
+    },
+    "E14000951": {
+        "name": "South West Hertfordshire",
+        "reg": "E15000006"
+    },
+    "E14000619": {
+        "name": "Canterbury",
+        "reg": "E15000008"
+    },
+    "E14000851": {
+        "name": "North Swindon",
+        "reg": "E15000009"
+    },
+    "E14000575": {
+        "name": "Blyth Valley",
+        "reg": "E15000001"
+    },
+    "E14000962": {
+        "name": "St Helens North",
+        "reg": "E15000002"
+    },
+    "E14001012": {
+        "name": "Walsall South",
+        "reg": "E15000005"
+    },
+    "E14000847": {
+        "name": "North Herefordshire",
+        "reg": "E15000005"
+    },
+    "E14000987": {
+        "name": "Tatton",
+        "reg": "E15000002"
+    },
+    "E14000650": {
+        "name": "Coventry North West",
+        "reg": "E15000005"
+    },
+    "E14000768": {
+        "name": "Kensington",
+        "reg": "E15000007"
+    },
+    "E14000774": {
+        "name": "Kingswood",
+        "reg": "E15000009"
+    },
+    "E14000960": {
+        "name": "St Albans",
+        "reg": "E15000006"
+    },
+    "E14000755": {
+        "name": "Hove",
+        "reg": "E15000008"
+    },
+    "E14001046": {
+        "name": "Witney",
+        "reg": "E15000008"
+    },
+    "E14000714": {
+        "name": "Grantham and Stamford",
+        "reg": "E15000004"
+    },
+    "E14000964": {
+        "name": "St Ives",
+        "reg": "E15000009"
+    },
+    "E14000686": {
+        "name": "Eddisbury",
+        "reg": "E15000002"
+    },
+    "E14000663": {
+        "name": "Derby South",
+        "reg": "E15000004"
+    },
+    "E14000911": {
+        "name": "Salford and Eccles",
+        "reg": "E15000002"
+    },
+    "E14000890": {
+        "name": "Reading West",
+        "reg": "E15000008"
+    },
+    "E14001001": {
+        "name": "Totnes",
+        "reg": "E15000009"
+    },
+    "E14000940": {
+        "name": "South Leicestershire",
+        "reg": "E15000004"
+    },
+    "E14000706": {
+        "name": "Fylde",
+        "reg": "E15000002"
+    },
+    "E14000561": {
+        "name": "Birmingham, Erdington",
+        "reg": "E15000005"
+    },
+    "E14000822": {
+        "name": "Milton Keynes South",
+        "reg": "E15000008"
+    },
+    "E14000775": {
+        "name": "Knowsley",
+        "reg": "E15000002"
+    },
+    "E14000543": {
+        "name": "Barrow and Furness",
+        "reg": "E15000002"
+    },
+    "W07000058": {
+        "name": "Aberconwy",
+        "reg": "W08000001"
+    },
+    "E14000562": {
+        "name": "Birmingham, Hall Green",
+        "reg": "E15000005"
+    },
+    "E14000691": {
+        "name": "Enfield North",
+        "reg": "E15000007"
+    },
+    "E14001037": {
+        "name": "Westmorland and Lonsdale",
+        "reg": "E15000002"
+    },
+    "E14000993": {
+        "name": "Thirsk and Malton",
+        "reg": "E15000003"
+    },
+    "E14000664": {
+        "name": "Derbyshire Dales",
+        "reg": "E15000004"
+    },
+    "E14000916": {
+        "name": "Sefton Central",
+        "reg": "E15000002"
+    },
+    "E14000973": {
+        "name": "Stoke-on-Trent North",
+        "reg": "E15000005"
+    },
+    "E14000825": {
+        "name": "Morecambe and Lunesdale",
+        "reg": "E15000002"
+    },
+    "E14000648": {
+        "name": "Corby",
+        "reg": "E15000004"
+    },
+    "E14000536": {
+        "name": "Ashford",
+        "reg": "E15000008"
+    },
+    "E14001007": {
+        "name": "Uxbridge and South Ruislip",
+        "reg": "E15000007"
+    },
+    "W07000047": {
+        "name": "Swansea West",
+        "reg": "W08000001"
+    },
+    "E14000660": {
+        "name": "Daventry",
+        "reg": "E15000004"
+    },
+    "E14000705": {
+        "name": "Forest of Dean",
+        "reg": "E15000009"
+    },
+    "E14000814": {
+        "name": "Mid Derbyshire",
+        "reg": "E15000004"
+    },
+    "E14000688": {
+        "name": "Ellesmere Port and Neston",
+        "reg": "E15000002"
+    },
+    "E14000938": {
+        "name": "South East Cornwall",
+        "reg": "E15000009"
+    },
+    "E14000756": {
+        "name": "Huddersfield",
+        "reg": "E15000003"
+    },
+    "E14000710": {
+        "name": "Gedling",
+        "reg": "E15000004"
+    },
+    "E14000787": {
+        "name": "Lewisham East",
+        "reg": "E15000007"
+    },
+    "E14001034": {
+        "name": "West Suffolk",
+        "reg": "E15000006"
+    },
+    "E14000823": {
+        "name": "Mitcham and Morden",
+        "reg": "E15000007"
+    },
+    "E14000658": {
+        "name": "Darlington",
+        "reg": "E15000001"
+    },
+    "E14000873": {
+        "name": "Oxford East",
+        "reg": "E15000008"
+    },
+    "E14000738": {
+        "name": "Hazel Grove",
+        "reg": "E15000002"
+    },
+    "E14000871": {
+        "name": "Oldham West and Royton",
+        "reg": "E15000002"
+    },
+    "E14000649": {
+        "name": "Coventry North East",
+        "reg": "E15000005"
+    },
+    "E14000763": {
+        "name": "Islington North",
+        "reg": "E15000007"
+    },
+    "E14000801": {
+        "name": "Luton South",
+        "reg": "E15000006"
+    },
+    "E14000905": {
+        "name": "Rugby",
+        "reg": "E15000005"
+    },
+    "E14000829": {
+        "name": "Newark",
+        "reg": "E15000004"
+    },
+    "E14001042": {
+        "name": "Windsor",
+        "reg": "E15000008"
+    },
+    "E14000848": {
+        "name": "North Norfolk",
+        "reg": "E15000006"
+    },
+    "E14000894": {
+        "name": "Ribble Valley",
+        "reg": "E15000002"
+    },
+    "E14000530": {
+        "name": "Aldershot",
+        "reg": "E15000008"
+    },
+    "E14000737": {
+        "name": "Hayes and Harlington",
+        "reg": "E15000007"
+    },
+    "E14000946": {
+        "name": "South Suffolk",
+        "reg": "E15000006"
+    },
+    "W07000059": {
+        "name": "Clwyd West",
+        "reg": "W08000001"
+    },
+    "E14000776": {
+        "name": "Lancaster and Fleetwood",
+        "reg": "E15000002"
+    },
+    "E14000887": {
+        "name": "Putney",
+        "reg": "E15000007"
+    },
+    "E14000573": {
+        "name": "Blackpool South",
+        "reg": "E15000002"
+    },
+    "E14000728": {
+        "name": "Harborough",
+        "reg": "E15000004"
+    },
+    "E14000633": {
+        "name": "Chichester",
+        "reg": "E15000008"
+    },
+    "E14000592": {
+        "name": "Brent North",
+        "reg": "E15000007"
+    },
+    "E14000569": {
+        "name": "Bishop Auckland",
+        "reg": "E15000001"
+    },
+    "W07000054": {
+        "name": "Monmouth",
+        "reg": "W08000001"
+    },
+    "E14000832": {
+        "name": "Newcastle upon Tyne East",
+        "reg": "E15000001"
+    },
+    "E14000563": {
+        "name": "Birmingham, Hodge Hill",
+        "reg": "E15000005"
+    },
+    "W07000050": {
+        "name": "Cardiff Central",
+        "reg": "W08000001"
+    },
+    "E14000610": {
+        "name": "Burton",
+        "reg": "E15000005"
+    },
+    "E14000608": {
+        "name": "Buckingham",
+        "reg": "E15000008"
+    },
+    "E14000654": {
+        "name": "Croydon Central",
+        "reg": "E15000007"
+    },
+    "E14000540": {
+        "name": "Barking",
+        "reg": "E15000007"
+    },
+    "E14000975": {
+        "name": "Stone",
+        "reg": "E15000005"
+    },
+    "E14000928": {
+        "name": "Skipton and Ripon",
+        "reg": "E15000003"
+    },
+    "E14000834": {
+        "name": "Newcastle-under-Lyme",
+        "reg": "E15000005"
+    },
+    "E14000740": {
+        "name": "Hemsworth",
+        "reg": "E15000003"
+    },
+    "E14000719": {
+        "name": "Guildford",
+        "reg": "E15000008"
+    },
+    "E14000879": {
+        "name": "Plymouth, Moor View",
+        "reg": "E15000009"
+    },
+    "E14000636": {
+        "name": "Chipping Barnet",
+        "reg": "E15000007"
+    },
+    "E14000593": {
+        "name": "Brentford and Isleworth",
+        "reg": "E15000007"
+    },
+    "E14000869": {
+        "name": "Old Bexley and Sidcup",
+        "reg": "E15000007"
+    },
+    "E14000857": {
+        "name": "North West Hampshire",
+        "reg": "E15000008"
+    },
+    "E14001011": {
+        "name": "Walsall North",
+        "reg": "E15000005"
+    },
+    "E14000680": {
+        "name": "East Hampshire",
+        "reg": "E15000008"
+    },
+    "E14000828": {
+        "name": "New Forest West",
+        "reg": "E15000008"
+    },
+    "W07000052": {
+        "name": "Rhondda",
+        "reg": "W08000001"
+    },
+    "E14000621": {
+        "name": "Carshalton and Wallington",
+        "reg": "E15000007"
+    },
+    "E14000839": {
+        "name": "North Dorset",
+        "reg": "E15000009"
+    },
+    "E14000769": {
+        "name": "Kettering",
+        "reg": "E15000004"
+    },
+    "E14000860": {
+        "name": "North Wiltshire",
+        "reg": "E15000009"
+    },
+    "E14000926": {
+        "name": "Shrewsbury and Atcham",
+        "reg": "E15000005"
+    },
+    "E14000541": {
+        "name": "Barnsley Central",
+        "reg": "E15000003"
+    },
+    "E14000910": {
+        "name": "Saffron Walden",
+        "reg": "E15000006"
+    },
+    "E14000690": {
+        "name": "Eltham",
+        "reg": "E15000007"
+    },
+    "E14001019": {
+        "name": "Warwick and Leamington",
+        "reg": "E15000005"
+    },
+    "W07000053": {
+        "name": "Torfaen",
+        "reg": "W08000001"
+    },
+    "E14001054": {
+        "name": "Worsley and Eccles South",
+        "reg": "E15000002"
+    },
+    "E14000687": {
+        "name": "Edmonton",
+        "reg": "E15000007"
+    },
+    "E14000922": {
+        "name": "Sheffield, Hallam",
+        "reg": "E15000003"
+    },
+    "E14000673": {
+        "name": "Dulwich and West Norwood",
+        "reg": "E15000007"
+    },
+    "W07000064": {
+        "name": "Ceredigion",
+        "reg": "W08000001"
+    },
+    "E14000820": {
+        "name": "Middlesbrough South and East Cleveland",
+        "reg": "E15000001"
+    },
+    "E14001040": {
+        "name": "Wimbledon",
+        "reg": "E15000007"
+    },
+    "E14000711": {
+        "name": "Gillingham and Rainham",
+        "reg": "E15000008"
+    },
+    "E14000909": {
+        "name": "Rutland and Melton",
+        "reg": "E15000004"
+    },
+    "E14000803": {
+        "name": "Maidenhead",
+        "reg": "E15000008"
+    },
+    "W07000048": {
+        "name": "Swansea East",
+        "reg": "W08000001"
+    },
+    "E14000994": {
+        "name": "Thornbury and Yate",
+        "reg": "E15000009"
+    },
+    "E14000539": {
+        "name": "Banbury",
+        "reg": "E15000008"
+    },
+    "E14001022": {
+        "name": "Waveney",
+        "reg": "E15000006"
+    },
+    "E14000564": {
+        "name": "Birmingham, Ladywood",
+        "reg": "E15000005"
+    },
+    "E14000669": {
+        "name": "Doncaster North",
+        "reg": "E15000003"
+    },
+    "W07000069": {
+        "name": "Neath",
+        "reg": "W08000001"
+    },
+    "E14000874": {
+        "name": "Oxford West and Abingdon",
+        "reg": "E15000008"
+    },
+    "E14000789": {
+        "name": "Lewisham, Deptford",
+        "reg": "E15000007"
+    },
+    "E14000628": {
+        "name": "Chelmsford",
+        "reg": "E15000006"
+    },
+    "E14000937": {
+        "name": "South East Cambridgeshire",
+        "reg": "E15000006"
+    },
+    "W07000075": {
+        "name": "Pontypridd",
+        "reg": "W08000001"
+    },
+    "E14000566": {
+        "name": "Birmingham, Perry Barr",
+        "reg": "E15000005"
+    },
+    "E14000627": {
+        "name": "Cheadle",
+        "reg": "E15000002"
+    },
+    "E14000674": {
+        "name": "Ealing Central and Acton",
+        "reg": "E15000007"
+    },
+    "W07000042": {
+        "name": "Delyn",
+        "reg": "W08000001"
+    },
+    "E14001008": {
+        "name": "Vauxhall",
+        "reg": "E15000007"
+    },
+    "E14000812": {
+        "name": "Meriden",
+        "reg": "E15000005"
+    },
+    "E14001053": {
+        "name": "Workington",
+        "reg": "E15000002"
+    },
+    "E14000551": {
+        "name": "Beckenham",
+        "reg": "E15000007"
+    },
+    "E14001024": {
+        "name": "Weaver Vale",
+        "reg": "E15000002"
+    },
+    "E14000798": {
+        "name": "Louth and Horncastle",
+        "reg": "E15000004"
+    },
+    "E14000927": {
+        "name": "Sittingbourne and Sheppey",
+        "reg": "E15000008"
+    },
+    "E14000683": {
+        "name": "East Yorkshire",
+        "reg": "E15000003"
+    },
+    "E14001047": {
+        "name": "Woking",
+        "reg": "E15000008"
+    },
+    "E14000914": {
+        "name": "Scunthorpe",
+        "reg": "E15000003"
+    },
+    "E14000531": {
+        "name": "Aldridge-Brownhills",
+        "reg": "E15000005"
+    },
+    "E14000598": {
+        "name": "Brighton, Pavilion",
+        "reg": "E15000008"
+    }
+}
