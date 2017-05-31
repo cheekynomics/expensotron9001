@@ -4,6 +4,10 @@ import { connect } from "react-redux";
 
 import { REGION_SELECTED } from "./Map.jsx";
 
+import idToName from "../../datafiles/idToName.json";
+
+import "./GroupedBarChart.styl";
+
 const name_to_id = {
   "North East": "E15000001",
   "North West": "E15000002",
@@ -324,7 +328,7 @@ class GroupedBarChart extends Component {
       .attr("fill", function(d) {
         return colorScale(`_${d["year"]}`);
       })
-      .attr("opacity", 0.8)
+      // .attr("opacity", 0.8)
       .attr("class", function(d) {
         return `bar _${d["year"]}`;
       })
@@ -391,10 +395,11 @@ class GroupedBarChart extends Component {
 
   render() {
     if (this._svg) {
-      let fr = this.props.focusedRegion;
-      this._svg
-        .selectAll(".region")
-        .classed("faded", d => fr && fr !== d.region);
+      let fr = idToName[this.props.focusedRegion] || null;
+      console.log(fr);
+      this._svg.selectAll(".region").classed("faded", d => {
+        return fr !== null && fr !== d.region;
+      });
     }
     return (
       <div className="groupedbar" ref={c => this._container = d3.select(c)}>

@@ -25,7 +25,6 @@ render(App);
 if (module.hot) {
   // Capture hot update
   module.hot.accept("./components/App", () => {
-    console.log("HERE?");
     let newApp = require("./components/App").App;
     render(newApp);
   });
@@ -35,7 +34,6 @@ if (module.hot) {
 
   // Handle errors...maybe?
   module.hot.accept(err => {
-    console.log("FOR THE LOVE OF JEBUS");
     console.error(err);
   });
 }
