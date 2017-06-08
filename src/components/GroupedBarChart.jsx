@@ -20,6 +20,63 @@ const name_to_id = {
   "South West": "E15000009"
 };
 
+
+const setFontSizeAndColour = (selection, size) => {
+  // Sets a consistent font family for all the text
+  selection.style("font-family", "Oswald").style("font-size", `${size}px`);
+}
+
+
+class Legend extends Component {
+  // Creates the legend items as a React Component. 
+  // Takes a list of legend items and a D3 colorscale, returns a labelled legend
+  render(){
+    // map the legend range to the number of legend items, then create the scale
+    let legendRangeMax = (this.props.legendItems.length * 20) + 10;
+    let legendY = d3.scaleBand().domain(this.props.legendItems).range([10, legendRangeMax]);
+
+    let legendColours = this.props.legendColours;
+    // make a list of the legend boxes
+    this.legendItems = this.props.legendItems.map(function(y){
+      return (
+        <rect width={12}
+              height={12}
+              className={`legend-box _${y}`}
+              fill={legendColours(y)}
+              transform={`translate(20, ${legendY(y)})`} />
+      );
+    });
+    // make a list of the text to be positioned by each legend component
+    this.legendText = this.props.legendItems.map(function(y){
+      return (
+        <text textAnchor={"left"}
+              dy={"0.7em"}
+              className={`legend-text _${y}`}
+              transform={`translate(36, ${legendY(y)})`}>{y}</text>
+      );
+    })
+
+    // render() function returns this top level object, filled with <rect>s and <text>s
+    return (
+      <g transform={`translate(${this.props.margin.l}, ${this.props.margin.t})`}
+          className={"legend"}>
+          {this.legendItems}
+          {this.legendText}
+      </g>
+    );
+  }
+}
+
+
+class _xAxis extends Component{
+  render(){
+    return (5);
+  }
+}
+
+
+
+
 class GroupedBarChart extends Component {
   wrap(text, width) {
     // used to wrap 'Yorkshire and the Humber' over two lines - taken from MBostock code
@@ -71,6 +128,7 @@ class GroupedBarChart extends Component {
         });
       }
     });
+    // get the max and round it up to the next million
     this.yMax =
       Math.ceil(
         d3.max(ExpensesData, function(d) {
@@ -84,10 +142,6 @@ class GroupedBarChart extends Component {
     this.chartData = ExpensesData;
   }
 
-  setFontSizeAndColour(selection, size) {
-    // Sets a consistent font family for all the text
-    selection.style("font-family", "Oswald").style("font-size", `${size}px`);
-  }
 
   addAxes() {
     // Adds the x- and y-axes, axis ticks, axis labels and styles them all
@@ -105,22 +159,26 @@ class GroupedBarChart extends Component {
       .call(yAxis);
 
     var yTicks = d3.selectAll(".axis.y > .tick > text");
+
+    // prepend a '£' to the axis ticks
     yTicks.nodes().forEach(function(t) {
-      // prepend a '£' to the axis ticks
       t.innerHTML = `£${t.innerHTML}`;
     });
+
+    // move the ticks a little bit further away from the axis and then set the font size and colour
     yTicks
       .attr("transform", "translate(-5, 0)")
-      .call(this.setFontSizeAndColour, 12);
+      .call(setFontSizeAndColour, 12);
 
     this.axisLayer
       .append("text")
-      .text("Total value of expense claims")
+      .text(this.props.xTitle)
       .attr("x", 0 - this.chartHeight / 2)
       .attr("y", margin.l / 2)
       .attr("text-anchor", "middle")
       .attr("transform", "rotate(-90)")
-      .call(this.setFontSizeAndColour, 20);
+      .call(setFontSizeAndColour, 20);
+
     let xAxis = d3.axisBottom(this.xScale);
 
     this.axisLayer
@@ -136,19 +194,23 @@ class GroupedBarChart extends Component {
 
     this.axisLayer
       .append("text")
-      .text("Region")
+      .text(this.props.yTitle)
       .attr(
         "transform",
         `translate(${(this._width + margin.l) / 2}, ${this.chartHeight + margin.t + 50})`
       )
       .style("text-anchor", "middle")
-      .call(this.setFontSizeAndColour, 20);
+      .call(setFontSizeAndColour, 20);
 
     d3
       .selectAll(".axis.x > .tick > text")
       .on("click", e => this.props.selectRegion(name_to_id[e]))
-      .call(this.setFontSizeAndColour, 12);
+      .call(setFontSizeAndColour, 12);
   }
+
+  
+
+  
 
   setColours(current, comparison, positive, negative) {
     // Changes the colour of the bars based on hover
@@ -232,9 +294,7 @@ class GroupedBarChart extends Component {
 
   setSize() {
     // Inital setup of graph svg here
-    let { height, width } = this._container._groups[0][
-      0
-    ].getBoundingClientRect();
+    //let { height, width } = this._container._groups[0][0].getBoundingClientRect();
     // let cs = getComputedStyle(this._container._groups[0][0]);
     // let height = cs.getPropertyValue('height');
     // let width = cs.getPropertyValue('width');
@@ -243,11 +303,14 @@ class GroupedBarChart extends Component {
     // console.log(height);
     // let height = bottom - top;
     // let width = right - left;
-    this._svg.style("width", "100%"); //I can reference that which was rendered using the same name
-    this._svg.style("height", height);
 
-    this._width = width;
-    this._height = height;
+
+
+    this._svg.style("width", this.props.width); 
+    this._svg.style("height", this.props.height);
+
+    this._width = this.props.width;
+    this._height = this.props.height;
 
     let margin = this.props.margin;
     this.chartWidth = this._width - margin.l - margin.r;
@@ -265,37 +328,15 @@ class GroupedBarChart extends Component {
 
   componentDidMount() {
     // Sets up the different components of the chart
-    this.getData(this.props.data);
+    
 
-    (this.axisLayer = this._svg
+    this.axisLayer = this._svg
       .append("g")
-      .classed("axisLayer", true)), (this._chartLayer = this._svg
+      .classed("axisLayer", true), 
+    this._chartLayer = this._svg
       .append("g")
-      .classed("chartLayer", true));
+      .classed("chartLayer", true);
 
-    this.xScale = d3
-      .scaleBand()
-      .domain(this.regions)
-      .paddingInner(0.1)
-      .paddingOuter(0.01);
-    this.xInScale = d3.scaleBand().domain(this.years);
-    this.yScale = d3.scaleLinear().domain([0, this.yMax]);
-
-    this.colors = d3
-      .scaleOrdinal()
-      .range([
-        "rgb(242,51,135)",
-        "rgb(108,73,75)",
-        "rgb(237,127,97)",
-        "rgb(215,5,13)",
-        "rgb(144,45,84)",
-        "rgb(164,62,3)"
-      ])
-      .domain(
-        this.years.map(function(y) {
-          return `_${y}`;
-        })
-      );
 
     this.setSize();
 
@@ -346,64 +387,57 @@ class GroupedBarChart extends Component {
         return "translate(" + [xInScale(d["year"]), yScale(d.paid)] + ")";
       });
 
-    // Creates the legend
-    let legendY = d3.scaleBand().domain(this.years).range([10, 130]);
-
-    let legend = this._chartLayer
-      .append("g")
-      .style("transform", "translate(50, 30")
-      .attr("class", "legend");
-
-    legend
-      .selectAll(".box")
-      .data(this.years)
-      .enter()
-      .append("rect")
-      .attr("width", 8)
-      .attr("height", 8)
-      .attr("class", function(d) {
-        return `legend-box _${d}`;
-      })
-      .attr("fill", function(d) {
-        return colorScale(d);
-      })
-      .attr("transform", function(d) {
-        return `translate(20,${legendY(d)})`;
-      });
-
-    legend
-      .selectAll("text")
-      .data(this.years)
-      .enter()
-      .append("text")
-      .attr("transform", function(d) {
-        return `translate(32,${legendY(d)})`;
-      })
-      .text(function(d) {
-        return d;
-      })
-      .attr("text-anchor", "left")
-      .attr("dy", "0.7em")
-      .attr("class", function(d) {
-        return "legend-text";
-      })
-      .call(this.setFontSizeAndColour, 12);
-
     this.setInteractions();
     this.addAxes();
   }
 
   render() {
+
+    this.getData(this.props.data);
+
+    this.xScale = d3
+      .scaleBand()
+      .domain(this.regions)
+      .paddingInner(0.1)
+      .paddingOuter(0.01);
+    this.xInScale = d3.scaleBand().domain(this.years);
+    this.yScale = d3.scaleLinear().domain([0, this.yMax]);
+
+    this.colors = d3
+      .scaleOrdinal()
+      .range([
+        "rgb(242,51,135)",
+        "rgb(108,73,75)",
+        "rgb(237,127,97)",
+        "rgb(215,5,13)",
+        "rgb(144,45,84)",
+        "rgb(164,62,3)"
+      ])
+      .domain(
+        this.years.map(function(y) {
+          return `_${y}`;
+        })
+      );
+
+    let xScale = this.xScale;
+    let chartHeight = this.chartHeight;
+
+    //console.log(xScale);
+
     if (this._svg) {
       let fr = idToName[this.props.focusedRegion] || null;
-      console.log(fr);
       this._svg.selectAll(".region").classed("faded", d => {
         return fr !== null && fr !== d.region;
       });
     }
+
     return (
       <div className="groupedbar" ref={c => this._container = d3.select(c)}>
-        <svg ref={c => this._svg = d3.select(c)} />
+        <svg ref={c => this._svg = d3.select(c)}>
+          <Legend margin={this.props.margin}
+                  legendItems={this.years}
+                  legendColours={this.colors} />
+          </svg>
       </div>
     );
   }

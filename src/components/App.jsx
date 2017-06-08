@@ -24,7 +24,11 @@ class Expensotron extends React.Component {
             b: 70,
             r: 20
           }}
+          height={800}
+          width={600}
           data={expenses}
+          xTitle = {"Total Value of Expense Claims"}
+          yTitle = {"Region"}
         />
       </div>
     );
