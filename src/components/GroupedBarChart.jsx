@@ -45,70 +45,35 @@ const getWidthOfText = (txt, fontname, fontsize) =>{
 }
 
 
-const wrap = (text, width) => {
-    // used to wrap long svg text - works on the text element itself, therefore doesn't work for the React class
-    text.each(function() {
-      var text = d3.select(this),
-        words = text.text().split(/\s+/).reverse(),
-        word,
-        line = [],
-        lineNumber = 0,
-        lineHeight = 1.1, // ems
-        y = text.attr("y"),
-        dy = parseFloat(text.attr("dy")),
-        tspan = text
-          .text(null)
-          .append("tspan")
-          .attr("x", 0)
-          .attr("y", y)
-          .attr("dy", dy + "em");
-        
-      while ((word = words.pop())) {
-        line.push(word);
-        tspan.text(line.join(" "));
-        //console.log(tspan);
-        if (tspan.node().getComputedTextLength() > width) {
-          line.pop();
-          tspan.text(line.join(" "));
-          line = [word];
-          tspan = text
-            .append("tspan")
-            .attr("x", 0)
-            .attr("y", y)
-            .attr("dy", ++lineNumber * lineHeight + dy + "em")
-            .text(word);
-        }
-      }
-    });
-}
-
 const textWrap = (text, width, y, dy) => {
+  // This needs work. I'm pretty sure it's just splitting each word into a aseparate line rather than grouping
+  // the words into strings shorter than the length. EG Yorkshire /n & /n the /n Humber
+
   // Takes a string, target width, y value and dy value, then returns a list of textspan objects
   // with the string broken down into words, one in each textspan object and positione vertically
-  // Adapted from Mike Bostock's version (above) which works on the element rather than the raw string
-  var words = text.split(/\s+/).reverse(),
+  // Adapted from Mike Bostock's version which works on the element rather than the raw string
+  var words = text.split(/\s+/).reverse(), //reverse the list so when the words are popped from the end, they come out in the right order
     word,
     line=[],
     lineNumber = 0,
     lineHeight = 1.1,
     output = [];
 
+  // Basically 'while True', but runs until words is empty
   while((word = words.pop())){
     line.push(word);
     let _text = line.join(" ");
-    if (getWidthOfText(_text, 'Arial', 12) > width){
-      line.pop();
-      _text = line.join(" ");
+    if (getWidthOfText(_text, 'Arial', 12) > width){ // if the resulting string is longer than allowed:
+      line.pop(); // remove the element we just added
+      _text = line.join(" "); // then re-create the text for the textspan off the shorter text
       line = [word];
-      output.push(<tspan x={0}
-                            y={y}
-                            dy={lineNumber * lineHeight + dy + "em"}>{word}</tspan>)
+      // put the tspan to the output
+      output.push(<tspan x={0} y={y} dy={lineNumber * lineHeight + dy + "em"}>{word}</tspan>)
       lineNumber ++;
     }
     else{
-      output.push(<tspan x={0}
-                            y={y}
-                            dy={lineNumber * lineHeight + dy + "em"}>{word}</tspan>)
+      // otherwise if the word isn't longer then we stil output it
+      output.push(<tspan x={0} y={y} dy={lineNumber * lineHeight + dy + "em"}>{word}</tspan>)
       lineNumber ++;
     }
   }
@@ -160,16 +125,18 @@ class Legend extends Component {
 
 
 class _xAxis extends Component{
+  // Creates the x-axis path, ticklabels and tickmarks as react components
   render(){
     let xScale = this.props.xScale,
-      regions = this.props.xScale.domain();
+      xValues = this.props.xScale.domain();
     
     // create a list of the tick objects. 
     // Each will contain a line and a text object (which may in turn contain textspans)
-    let ticks = regions.map(function(r){
-      // calculate the textSpans
+    let ticks = xValues.map(function(r){
+      // calculate the textSpans for each region using the function defined above
       let textSpans = textWrap(r, xScale.bandwidth(), 9, 0.71);
       return (
+        // for each of the xValues, we need to return a tick, composed of a tickline and a ticklabel (itself comprising multiple textspans)
         <g className={"tick"}
             opacity={1}
             transform={`translate(${xScale(r) + (xScale.bandwidth() / 2)}, 0)`}>
@@ -184,6 +151,7 @@ class _xAxis extends Component{
       )
     })
 
+    // Render function returns the axis object, with a path and ticks for each category value
     return (
     <g className={"axis x"}
         transform={`translate(${this.props.margin.l}, ${this.props.chartHeight + this.props.margin.t})`}> 
@@ -198,15 +166,15 @@ class _xAxis extends Component{
 
 
 class _yAxis extends Component{
+  // Creates the xAxis path, ticks and ticklabels
   render(){
     let yScale = this.props.yScale,
       chartWidth = this.props.chartWidth,
-      f = d3.formatPrefix(".0", 1e6);//d3.format(".2s");
+      f = d3.formatPrefix(".0", 1e6); //create the format which takes the million-zeroes and replaces them with an 'M'
 
-    let tickNumbers = yScale.ticks(10);
-
-    let ticks = tickNumbers.map(function(t){
+    let ticks = yScale.ticks(10).map(function(t){ // we want ten ticks (or thereabouts, D3 will look after us)
       return (
+        // Creates a gridline for the whole chart, then a small ticklabel and the accompanying text
         <g className={"tick"}
             opacity={1}
             transform={`translate(0, ${yScale(t) + 0.5})`}>
@@ -224,8 +192,8 @@ class _yAxis extends Component{
     })
 
     return (
+      // Returns the axis path and ticks
     <g className={"axis y"}
-
         transform={`translate(${this.props.margin.l}, ${this.props.margin.t})`}> 
         <path className={"domain"}
               fill={'none'}
@@ -297,7 +265,7 @@ class GroupedBarChart extends Component {
         .on("mouseover", function() {
           //Only the bar and corresponding legend items are coloured in on hover
           let innerClass = this.className.baseVal.split(" ")[1];
-
+          //All of the bars should be coloured in the corresponding Year colour or in grey if they are not selected
           svg
             .selectAll(".bar")
             .attr("fill", function() {
@@ -308,6 +276,7 @@ class GroupedBarChart extends Component {
                 "#d3d3d3"
               );
             })
+            // And the greyed out ones shouldn't have an outline
             .style("stroke", function() {
               return setColours(
                 this.className.baseVal,
@@ -316,7 +285,7 @@ class GroupedBarChart extends Component {
                 "none"
               );
             });
-
+          // And the legend texts should also be greyed out as well
           svg.selectAll(`.legend-text`).style("fill", function() {
             return setColours(
               this.className.baseVal,
@@ -325,7 +294,7 @@ class GroupedBarChart extends Component {
               "#d3d3d3"
             );
           });
-
+          // And the legend boxes should be greyed out for those that aren't selected
           svg.selectAll(`.legend-box`).style("fill", function() {
             return setColours(
               this.className.baseVal,
@@ -335,18 +304,18 @@ class GroupedBarChart extends Component {
             );
           });
         })
+        // Change the colour to what it was before
         .on("mouseout", function() {
-          // Change the colour to what it was before
           svg
             .selectAll(".bar")
             .attr("fill", function() {
+              // set the colour of the bars using the colourscale we previously created
               return colorScale(this.className.baseVal.split(" ")[1]);
             })
             .style("stroke", "#333");
-
           svg.selectAll(`.legend-text`).style("fill", "black");
-
           svg.selectAll(".legend-box").style("fill", function() {
+            // Set the colour of the legend boxes as well
             return colorScale(this.className.baseVal.split(" ")[1]);
           });
         });
@@ -354,87 +323,64 @@ class GroupedBarChart extends Component {
   }
 
   setSize() {
-    // Inital setup of graph svg here
-    //let { height, width } = this._container._groups[0][0].getBoundingClientRect();
-    // let cs = getComputedStyle(this._container._groups[0][0]);
-    // let height = cs.getPropertyValue('height');
-    // let width = cs.getPropertyValue('width');
-    // console.log(cs.getPropertyValue('height'));
-    // console.log(top, bottom);
-    // console.log(height);
-    // let height = bottom - top;
-    // let width = right - left;
-
-
-
     this._svg.style("width", this.props.width); 
     this._svg.style("height", this.props.height);
 
-    this._width = this.props.width;
-    this._height = this.props.height;
-
-    let margin = this.props.margin;
-    this.chartWidth = this._width - margin.l - margin.r;
-    this.chartHeight = this._height - margin.t - margin.b;
+    //this.chartWidth = this.props.width - this.props.margin.l - this.props.margin.r;
+    //this.chartHeight = this.props.height - this.props.margin.t - this.props.margin.b;
 
     this._chartLayer
       .attr("width", this.chartWidth)
       .attr("height", this.chartHeight)
-      .attr("transform", `translate(${margin.l}, ${margin.t})`);
+      .attr("transform", `translate(${this.props.margin.l}, ${this.props.margin.t})`);
   }
 
   componentDidMount() {
-    // Sets up the different components of the chart
-    
-
     this.axisLayer = this._svg
-      .append("g")
-      .classed("axisLayer", true), 
+      .append("g"), 
     this._chartLayer = this._svg
-      .append("g")
-      .classed("chartLayer", true);
-
+      .append("g");
 
     this.setSize();
 
+    // rescope these variables for use in a function later on
     let colorScale = this.colors,
       xScale = this.xScale,
       xInScale = this.xInScale,
       yScale = this.yScale,
       chartHeight = this.chartHeight;
 
-
     // draws the bars
-    let t = d3.transition().duration(1000).ease(d3.easeLinear);
-
     let outer = this._chartLayer.selectAll(".outer").data(this.chartData);
-
     let inner = outer.enter().append("g").attr("class", "region");
 
+    //position the bar groups based on the xScale
     outer.merge(inner).attr("transform", function(d) {
-      return "translate(" + [xScale(d["region"]), 0] + ")";
+      return `translate(${xScale(d["region"])}, 0)`;
     });
 
+    // bind the list of yearly expenses to each region goup
     let bar = inner.selectAll(".bar").data(function(d) {
       return d.values;
     });
-
+    // Now create the bars for each year
     let newBar = bar.enter().append("rect").attr("class", "bar");
     bar
       .merge(newBar)
-      .attr("width", this.xInScale.bandwidth())
+      .attr("width", xInScale.bandwidth())
       .attr("height", 0)
       .attr("fill", function(d) {
-        return colorScale(`_${d["year"]}`);
+        return colorScale(`_${d["year"]}`); // Colour the bar
       })
-      // .attr("opacity", 0.8)
       .attr("class", function(d) {
-        return `bar _${d["year"]}`;
+        return `bar _${d["year"]}`; // Set the class so it can be selected later
       })
       .attr("transform", function(d) {
-        return "translate(" + [xInScale(d["year"]), chartHeight] + ")";
+        return `translate(${xInScale(d["year"])}, ${chartHeight})`; // move the bar using the inner scale
       });
 
+    // Create the initial animation
+    let t = d3.transition().duration(1000).ease(d3.easeLinear); 
     bar
       .merge(newBar)
       .transition(t)
@@ -442,15 +388,20 @@ class GroupedBarChart extends Component {
         return chartHeight - yScale(d.paid);
       })
       .attr("transform", function(d) {
-        return "translate(" + [xInScale(d["year"]), yScale(d.paid)] + ")";
+        return `translate(${xInScale(d["year"])}, ${yScale(d.paid)})`;
       });
 
     this.setInteractions();
   }
 
   render() {
-
+    // get the data into the right shape, getting the min and max
     this.getData(this.props.data);
+
+    this.chartHeight = this.props.height - this.props.margin.t - this.props.margin.b;
+    this.chartWidth = this.props.width - this.props.margin.l - this.props.margin.r;
+    let chartHeight = this.chartHeight, 
+      chartWidth = this.chartWidth;
 
     this.colors = d3
       .scaleOrdinal()
@@ -467,10 +418,6 @@ class GroupedBarChart extends Component {
           return `_${y}`;
         })
       );
-
-    let chartHeight = this.props.height - this.props.margin.t - this.props.margin.b;
-    let chartWidth = this.props.width - this.props.margin.l - this.props.margin.r;
-
     this.xScale = d3
       .scaleBand()
       .domain(this.regions)
