@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 import { UKMap } from "./Map.jsx";
-import GroupedBarChart from "./GroupedBarChart.jsx";
+//import GroupedBarChart from "./GroupedBarChart.jsx";
+
+import LineChart from "./GroupedBarChart.jsx";
 
 import * as expenses from "../../datafiles/SummariesByRegionAndYear.json";
 
@@ -17,7 +19,7 @@ class Expensotron extends React.Component {
     return (
       <div className="wrapper">
         <UKMap />
-        <GroupedBarChart
+        {/*<GroupedBarChart
           margin={{
             l: 100,
             t: 20,
@@ -29,6 +31,18 @@ class Expensotron extends React.Component {
           data={expenses}
           yTitle = {"Total Value of Expense Claims"}
           xTitle = {"Region"}
+        />*/}
+        <LineChart
+          margin={{l : 100,
+                  t : 50,
+                  b : 70,
+                  r : 20}}
+          data = {expenses}
+          xTitle = {"Year"}
+          height={800}
+          width={600}
+          yTitle = {"Total value of expense claims"}
+          chartTitle = {"Change in expense claims each year"}
         />
       </div>
     );

@@ -128,28 +128,48 @@ class _xAxis extends Component{
   // Creates the x-axis path, ticklabels and tickmarks as react components
   render(){
     let xScale = this.props.xScale,
-      xValues = this.props.xScale.domain();
+      ticks;
     
-    // create a list of the tick objects. 
-    // Each will contain a line and a text object (which may in turn contain textspans)
-    let ticks = xValues.map(function(r){
-      // calculate the textSpans for each region using the function defined above
-      let textSpans = textWrap(r, xScale.bandwidth(), 9, 0.71);
-      return (
-        // for each of the xValues, we need to return a tick, composed of a tickline and a ticklabel (itself comprising multiple textspans)
-        <g className={"tick"}
-            opacity={1}
-            transform={`translate(${xScale(r) + (xScale.bandwidth() / 2)}, 0)`}>
-          <line stroke={"#000"}
-                y2={6}/>
-          <text y={9}
-                dy={"0.71em"}
-                textAnchor={"middle"}>
-                {textSpans}
-          </text>
-        </g>
-      )
-    })
+    // create a list of the tick objects for a grouped scale
+    if (this.props.scaleType === 'group'){
+      ticks = this.props.xScale.domain().map(function(r){
+        // calculate the textSpans for each region using the function defined above
+        let textSpans = textWrap(r, xScale.bandwidth(), 9, 0.71);
+        return (
+          // for each of the xValues, we need to return a tick, composed of a tickline and a ticklabel (itself comprising multiple textspans)
+          <g className={"tick"}
+              opacity={1}
+              transform={`translate(${xScale(r) + (xScale.bandwidth() / 2)}, 0)`}>
+            <line stroke={"#000"}
+                  y2={6}/>
+            <text y={9}
+                  dy={"0.71em"}
+                  textAnchor={"middle"}>
+                  {textSpans}
+            </text>
+          </g>
+        )
+      })
+    }
+
+    else if (this.props.scaleType === 'linear'){
+      ticks = xScale.domain().map(function(t){ // we want ten ticks (or thereabouts, D3 will look after us)
+        return (
+          // Creates a gridline for the whole chart, then a small ticklabel and the accompanying text
+          <g className={"tick"}
+                opacity={1}
+                transform={`translate(${xScale(t)}, 0)`}>
+              <line stroke={"#000"}
+                    y2={6}/>
+              <text y={9}
+                    dy={"0.71em"}
+                    textAnchor={"middle"}>{t}
+              </text>
+            </g>
+        )
+      })
+    }
+    
 
     // Render function returns the axis object, with a path and ticks for each category value
     return (
@@ -190,7 +210,7 @@ class _yAxis extends Component{
         </g>
       )
     })
-
+    console.log(this.props.chartHeight);
     return (
       // Returns the axis path and ticks
     <g className={"axis y"}
@@ -326,9 +346,6 @@ class GroupedBarChart extends Component {
     this._svg.style("width", this.props.width); 
     this._svg.style("height", this.props.height);
 
-    //this.chartWidth = this.props.width - this.props.margin.l - this.props.margin.r;
-    //this.chartHeight = this.props.height - this.props.margin.t - this.props.margin.b;
-
     this._chartLayer
       .attr("width", this.chartWidth)
       .attr("height", this.chartHeight)
@@ -398,11 +415,13 @@ class GroupedBarChart extends Component {
     // get the data into the right shape, getting the min and max
     this.getData(this.props.data);
 
+    // Calculate the height and width using the margins
     this.chartHeight = this.props.height - this.props.margin.t - this.props.margin.b;
     this.chartWidth = this.props.width - this.props.margin.l - this.props.margin.r;
     let chartHeight = this.chartHeight, 
       chartWidth = this.chartWidth;
 
+    // Set up the scales - colour scale, xScale, xInScale, yScale
     this.colors = d3
       .scaleOrdinal()
       .range([
@@ -433,7 +452,7 @@ class GroupedBarChart extends Component {
       .domain([0, this.yMax])
       .range([chartHeight, 0]);
 
-
+    // Some of Drummond's clever stuff here
     if (this._svg) {
       let fr = idToName[this.props.focusedRegion] || null;
       this._svg.selectAll(".region").classed("faded", d => {
@@ -441,6 +460,7 @@ class GroupedBarChart extends Component {
       });
     }
 
+    // This is the grouped bar chart, composed of the legend, x- and y-axes
     return (
       <div className="groupedbar" ref={c => this._container = d3.select(c)}>
         <svg ref={c => this._svg = d3.select(c)}>
@@ -450,6 +470,7 @@ class GroupedBarChart extends Component {
 
           <_xAxis margin={this.props.margin}
                   xScale={this.xScale}
+                  scaleType={"group"}
                   chartHeight={chartHeight}
                   chartWidth={chartWidth} />
 
@@ -463,6 +484,7 @@ class GroupedBarChart extends Component {
   }
 }
 
+// Allows the map to interact with the barchart. More of Drummond's clever stuff here :-)
 const mapStateToProps = state => {
   return {
     focusedRegion: state.selected_region
@@ -480,4 +502,150 @@ const UKBarChart = connect(mapStateToProps, mapDispatchToProps)(
   GroupedBarChart
 );
 
-export default UKBarChart;
+
+
+
+
+class LineChart extends Component{
+
+
+  getData(data){
+    // Pre-summarised data should be passed in as a prop. This cleans it up a little as, gets the max, years and regions
+    let ExpensesData = [],
+      regions = [],
+      years = [];
+        
+    Object.keys(data).forEach(function(k){
+      if (k !== 'default'){
+        ExpensesData.push(data[k]);
+        regions.push(data[k].region);
+        data[k].values.forEach(function(v){
+          if (! years.includes(v.year)){
+            years.push(v.year);
+          }   
+        })
+        data[k].values.sort(function(a, b){
+          return a.year - b.year;
+        })
+      }
+    })
+     this.yMax = Math.ceil(d3.max(ExpensesData, function(d){ return d3.max(d.values, function(v){return v.paid});})/1000000) * 1000000;
+     this.regions = regions;
+     this.years = years.sort();
+     this.chartData = ExpensesData;    
+  }        
+
+  setSize(){
+    // Inital setup of graph svg here
+    this._svg.style("width", "100%"); 
+    this._svg.style("height", "100%");
+
+    this._chartLayer
+      .attr("width", this.chartWidth)
+      .attr("height", this.chartHeight)
+      .attr("transform", `translate(${this.props.margin.l}, ${this.props.margin.t})`);
+  }
+
+
+  componentDidMount(){
+
+    this.axisLayer = this._svg.append("g");
+    this._chartLayer = this._svg.append("g");
+
+    this.setSize();
+    //this.addAxes();
+
+    this.axisLayer.append("text")
+      .text(this.props.chartTitle)
+      .attr("transform", `translate(${(this.chartWidth + this.props.margin.l + this.props.margin.r) / 2},${this.props.margin.t / 2})`)
+      .style("text-anchor", "middle")
+      .call(setFontSizeAndColour, 20);
+
+    let xs = this.xScale, 
+      ys = this.yScale
+
+    this.line = d3.line()
+      .x(function(d){return xs(d.year)})
+      .y(function(d){return ys(d.paid)})
+
+    let cl = this._chartLayer;
+    let line = this.line
+    let margin = this.props.margin;
+    let colors = this.colors
+    this.chartData.forEach(function(d){
+      cl.append("path")
+        .datum(d.values)
+        .attr("fill", "none")
+        .attr("stroke", colors(d.region))
+        .attr("stroke-width", 3)
+        .attr("d", line)
+    });
+  }
+   
+  render(){
+
+      // get the data into the right shape, getting the min and max
+    this.getData(this.props.data);
+
+    // Calculate the height and width using the margins
+    this.chartHeight = this.props.height - this.props.margin.t - this.props.margin.b;
+    this.chartWidth = this.props.width - this.props.margin.l - this.props.margin.r;
+    let chartHeight = this.chartHeight, 
+      chartWidth = this.chartWidth;
+
+    // Set up the scales - colour scale, xScale, xInScale, yScale
+    this.xScale = d3.scalePoint().domain(this.years).range([0, this.chartWidth]);
+    this.yScale = d3.scaleLinear().domain([0, this.yMax]).range([chartHeight, 0]);
+
+    this.colors = d3.scaleOrdinal()
+      .range(["rgb(242,51,135)", "rgb(108,73,75)", "rgb(237,127,97)",
+        "rgb(215,5,13)", "rgb(144,45,84)", "rgb(164,62,3)"])
+      .domain(this.regions);
+
+    // Some of Drummond's clever stuff here
+    if (this._svg) {
+      let fr = idToName[this.props.focusedRegion] || null;
+      this._svg.selectAll(".region").classed("faded", d => {
+        return fr !== null && fr !== d.region;
+      });
+    }
+
+
+
+
+
+    return (
+        <div className="line" ref={c => this._container = d3.select(c)}>
+    <svg ref={c => this._svg = d3.select(c)}>
+      <Legend margin={this.props.margin}
+              legendItems={this.regions}
+              legendColours={this.colors} />
+
+      <_xAxis margin={this.props.margin}
+              xScale={this.xScale}
+              scaleType={"linear"}
+              chartHeight={chartHeight}
+              chartWidth={chartWidth} />
+
+      <_yAxis margin={this.props.margin}
+              yScale={this.yScale}
+              chartHeight={chartHeight}
+              chartWidth={chartWidth} />
+      </svg>
+  </div>
+    )
+  }
+}
+
+
+
+
+
+const UKLineChart = connect(mapStateToProps, mapDispatchToProps)(
+  LineChart
+);
+
+
+
+
+export default UKLineChart;// UKBarChart;
