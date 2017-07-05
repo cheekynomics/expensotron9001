@@ -11,7 +11,8 @@ import idToName from "../../datafiles/idToName.json";
 
 import "./GroupedBarChart.styl";
 
-
+let vbWidth = 600,
+  vbHeight = 900;
 
 
 
@@ -45,9 +46,6 @@ class LineChart extends Component{
   }        
 
   setSize(){
-    // Inital setup of graph svg here
-    this._svg.style("width", "100%"); 
-    this._svg.style("height", "100%");
 
     this._chartLayer
       .attr("width", this.chartWidth)
@@ -97,8 +95,8 @@ class LineChart extends Component{
     this.getData(this.props.data);
 
     // Calculate the height and width using the margins
-    this.chartHeight = this.props.height - this.props.margin.t - this.props.margin.b;
-    this.chartWidth = this.props.width - this.props.margin.l - this.props.margin.r;
+    this.chartHeight = vbHeight - this.props.margin.t - this.props.margin.b;
+    this.chartWidth = vbWidth - this.props.margin.l - this.props.margin.r;
     let chartHeight = this.chartHeight, 
       chartWidth = this.chartWidth;
 
@@ -125,7 +123,8 @@ class LineChart extends Component{
 
     return (
         <div className="line" ref={c => this._container = d3.select(c)}>
-    <svg ref={c => this._svg = d3.select(c)}>
+    <svg ref={c => this._svg = d3.select(c)}
+          viewBox={`0 0 ${vbWidth} ${vbHeight}`}>
       <Legend margin={this.props.margin}
               legendItems={this.regions}
               legendColours={this.colors} />

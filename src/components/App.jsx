@@ -34,7 +34,7 @@ class Expensotron extends React.Component {
           yTitle = {"Total Value of Expense Claims"}
           xTitle = {"Region"}
         />}
-        {/*<LineChart
+        {<LineChart
           margin={{l : 100,
                   t : 50,
                   b : 70,
@@ -45,7 +45,7 @@ class Expensotron extends React.Component {
           width={600}
           yTitle = {"Total value of expense claims"}
           chartTitle = {"Change in expense claims each year"}
-        />*/}
+        />}
       </div>
     );
   }
