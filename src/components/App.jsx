@@ -7,6 +7,7 @@ import GroupedBarChart from "./GroupedBarChart.jsx";
 
 import * as expenses from "../../datafiles/SummariesByRegionAndYear.json";
 
+import "font-awesome-webpack";
 import "./App.styl";
 
 /*

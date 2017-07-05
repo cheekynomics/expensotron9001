@@ -30,10 +30,10 @@ const commonConfig = env =>
         src: env === "production"
           ? PATHS.src
           : [
-            "react-hot-loader/patch",
-            require.resolve("react-dev-utils/webpackHotDevClient"),
-            PATHS.src
-          ]
+              "react-hot-loader/patch",
+              require.resolve("react-dev-utils/webpackHotDevClient"),
+              PATHS.src
+            ]
       },
       output: {
         filename: "bundle.js",
@@ -50,11 +50,14 @@ const commonConfig = env =>
       },
       devtool: "source-map"
     },
-    parts.jsLoaders({
+    parts.styleLoaders({
       include,
       exclude
     }),
-    parts.styleLoaders({
+    parts.googleFonts(["Oswald", "Noto Serif"]),
+    parts.fontAwesome,
+    parts.imageLoader,
+    parts.jsLoaders({
       include,
       exclude
     }),
@@ -80,7 +83,6 @@ const developmentConfig = merge([
 module.exports = env => {
   process.env.BABEL_ENV = env;
   let common = commonConfig(env);
-
   if (env === "production") {
     return merge(common, productionConfig);
   }
