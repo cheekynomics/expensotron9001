@@ -10,6 +10,9 @@ import idToName from "../../datafiles/idToName.json";
 
 import "./GroupedBarChart.styl";
 
+let vbWidth = 600,
+  vbHeight = 900;
+
 
 class GroupedBarChart extends Component {
 
@@ -127,8 +130,6 @@ class GroupedBarChart extends Component {
   }
 
   setSize() {
-    this._svg.style("width", this.props.width); 
-    this._svg.style("height", this.props.height);
 
     this._chartLayer
       .attr("width", this.chartWidth)
@@ -200,8 +201,8 @@ class GroupedBarChart extends Component {
     this.getData(this.props.data);
 
     // Calculate the height and width using the margins
-    this.chartHeight = this.props.height - this.props.margin.t - this.props.margin.b;
-    this.chartWidth = this.props.width - this.props.margin.l - this.props.margin.r;
+    this.chartHeight = vbHeight - this.props.margin.t - this.props.margin.b;
+    this.chartWidth = vbWidth - this.props.margin.l - this.props.margin.r;
     let chartHeight = this.chartHeight, 
       chartWidth = this.chartWidth;
 
@@ -247,7 +248,8 @@ class GroupedBarChart extends Component {
     // This is the grouped bar chart, composed of the legend, x- and y-axes
     return (
       <div className="groupedbar" ref={c => this._container = d3.select(c)}>
-        <svg ref={c => this._svg = d3.select(c)}>
+        <svg ref={c => this._svg = d3.select(c)}
+              viewBox={`0 0 ${vbWidth} ${vbHeight}`}>
           <Legend margin={this.props.margin}
                   legendItems={this.years}
                   legendColours={this.colors} />
