@@ -1,29 +1,19 @@
 const webpack = require("webpack");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const BabiliPlugin = require("babili-webpack-plugin");
-// const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-// const cssnano = require("cssnano");
+const GoogleFontsPlugin = require("google-fonts-webpack-plugin");
 const path = require("path");
 
 /*
  * Conf parts for general process tooling
  */
-exports.cleanup = (
-  {
-    path
-  }
-) => {
+exports.cleanup = ({ path }) => {
   return {
     plugins: [new CleanWebpackPlugin([path])]
   };
 };
 
-exports.devServer = (
-  {
-    host,
-    port
-  }
-) => {
+exports.devServer = ({ host, port }) => {
   return {
     devServer: {
       historyApiFallback: true,
@@ -43,12 +33,7 @@ exports.devServer = (
 /*
  * Conf parts for javascript
  */
-exports.jsLoaders = (
-  {
-    include,
-    exclude
-  }
-) => {
+exports.jsLoaders = ({ include, exclude }) => {
   return {
     module: {
       rules: [
@@ -56,13 +41,15 @@ exports.jsLoaders = (
           test: /.jsx?$/,
           include,
           exclude,
-          loader: "babel-loader",
-          options: {
-            presets: [["es2015", { modules: false }], "react"],
-            plugins: ["syntax-dynamic-import"],
-            env: {
-              development: {
-                plugins: ["react-hot-loader/babel"]
+          use: {
+            loader: "babel-loader",
+            options: {
+              presets: [["es2015", { modules: false }], "react"],
+              plugins: ["syntax-dynamic-import"],
+              env: {
+                development: {
+                  plugins: ["react-hot-loader/babel"]
+                }
               }
             }
           }
@@ -79,26 +66,59 @@ exports.minifyJS = () => ({
 /*
  * Conf parts for styles
  */
-exports.styleLoaders = (
-  {
-    include,
-    exclude
+exports.googleFonts = fontFamilies => {
+  if (!fontFamilies) {
+    return {};
   }
-) => {
+  return {
+    plugins: [
+      new GoogleFontsPlugin({
+        fonts: fontFamilies.map(fontFamily => {
+          return { family: fontFamily };
+        })
+      })
+    ]
+  };
+};
+
+exports.fontAwesome = {
+  module: {
+    rules: [
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        use: "url-loader?limit=10000&mimetype=application/font-woff"
+      },
+      {
+        test: /.(ttf|otf|eot|svg?)(\?[a-z0-9]+)?$/,
+        use: [
+          {
+            loader: "file-loader"
+          }
+        ]
+      }
+    ]
+  }
+};
+
+exports.styleLoaders = ({ include, exclude }) => {
   return {
     module: {
       rules: [
         {
-          test: /.css$/,
+          test: /\.css$/,
           include,
           exclude,
-          loader: "style-loader!css-loader"
+          use: [{ loader: "style-loader" }, { loader: "css-loader" }]
         },
         {
-          test: /.styl$/,
+          test: /\.styl$/,
           include,
           exclude,
-          loader: "style-loader!css-loader!stylus-loader"
+          use: [
+            { loader: "style-loader" },
+            { loader: "css-loader" },
+            { loader: "stylus-loader" }
+          ]
         }
       ]
     }
@@ -108,12 +128,7 @@ exports.styleLoaders = (
 /*
  * Conf parts for static files
  */
-exports.gexfCopier = (
-  {
-    include,
-    exclude
-  }
-) => {
+exports.gexfCopier = ({ include, exclude }) => {
   return {
     module: {
       rules: [
@@ -121,11 +136,27 @@ exports.gexfCopier = (
           test: /\.gexf$/,
           include,
           exclude,
-          loader: "file-loader"
+          use: "file-loader"
         }
       ]
     }
   };
+};
+
+exports.imageLoader = {
+  module: {
+    rules: [
+      {
+        test: /\.(jpg|png)$/,
+        use: {
+          loader: "url-loader",
+          options: {
+            limit: 25000
+          }
+        }
+      }
+    ]
+  }
 };
 
 exports.jsonLoader = {
@@ -133,7 +164,7 @@ exports.jsonLoader = {
     rules: [
       {
         test: /\.json$/,
-        loader: "json-loader"
+        use: "json-loader"
       }
     ]
   }
@@ -145,7 +176,7 @@ exports.pixiLoader = {
       {
         enforce: "post",
         include: path.resolve(__dirname, "node_modules/pixi.js"),
-        loader: "transform?brfs"
+        use: "transform?brfs"
       }
     ]
   }
