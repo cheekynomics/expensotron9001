@@ -20,21 +20,29 @@ class Expensotron extends React.Component {
   render() {
     return (
       <div className="wrapper">
-        <UKMap />
-        {<GroupedBarChart
-          margin={{
-            l: 100,
-            t: 20,
-            b: 70,
-            r: 20
-          }}
-          height={800}
-          width={600}
-          data={expenses}
-          yTitle = {"Total Value of Expense Claims"}
-          xTitle = {"Region"}
-        />}
-        {/*<LineChart
+        <h1>UK MP Expenses Browser Prototype</h1>
+        <p>
+          Expenses data from{" "}
+          <a href="http://www.theipsa.org.uk/mp-costs/">the IPSA.</a>
+        </p>
+        <div className="row">
+          <UKMap />
+          {
+            <GroupedBarChart
+              margin={{
+                l: 100,
+                t: 20,
+                b: 70,
+                r: 20
+              }}
+              height={800}
+              width={600}
+              data={expenses}
+              yTitle={"Total Value of Expense Claims"}
+              xTitle={"Region"}
+            />
+          }
+          {/*<LineChart
           margin={{l : 100,
                   t : 50,
                   b : 70,
@@ -46,6 +54,7 @@ class Expensotron extends React.Component {
           yTitle = {"Total value of expense claims"}
           chartTitle = {"Change in expense claims each year"}
         />*/}
+        </div>
       </div>
     );
   }
