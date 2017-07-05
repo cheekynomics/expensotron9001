@@ -64,13 +64,14 @@ class _xAxis extends Component{
     
     // create a list of the tick objects for a grouped scale
     if (this.props.scaleType === 'group'){
-      ticks = this.props.xScale.domain().map(function(r){
+      ticks = this.props.xScale.domain().map(function(r, i){
         // calculate the textSpans for each region using the function defined above
         let textSpans = textWrap(r, xScale.bandwidth(), 9, 0.71);
         return (
           // for each of the xValues, we need to return a tick, composed of a tickline and a ticklabel (itself comprising multiple textspans)
           <g className={"tick"}
               opacity={1}
+              key={r}
               transform={`translate(${xScale(r) + (xScale.bandwidth() / 2)}, 0)`}>
             <line stroke={"#000"}
                   y2={6}/>
@@ -90,6 +91,7 @@ class _xAxis extends Component{
           // Creates a gridline for the whole chart, then a small ticklabel and the accompanying text
           <g className={"tick"}
                 opacity={1}
+                key={`X_${t}`}
                 transform={`translate(${xScale(t)}, 0)`}>
               <line stroke={"#000"}
                     y2={6}/>
@@ -129,6 +131,7 @@ class _yAxis extends Component{
         // Creates a gridline for the whole chart, then a small ticklabel and the accompanying text
         <g className={"tick"}
             opacity={1}
+            key={`Y_${t}`}
             transform={`translate(0, ${yScale(t) + 0.5})`}>
           <line stroke={"#000"}
                 x2={chartWidth}></line>

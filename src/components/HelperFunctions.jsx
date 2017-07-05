@@ -63,12 +63,12 @@ const textWrap = (text, width, y, dy) => {
       _text = line.join(" "); // then re-create the text for the textspan off the shorter text
       line = [word];
       // put the tspan to the output
-      output.push(<tspan x={0} y={y} dy={lineNumber * lineHeight + dy + "em"}>{word}</tspan>)
+      output.push(<tspan x={0} y={y} key={word} dy={lineNumber * lineHeight + dy + "em"}>{word}</tspan>)
       lineNumber ++;
     }
     else{
       // otherwise if the word isn't longer then we stil output it
-      output.push(<tspan x={0} y={y} dy={lineNumber * lineHeight + dy + "em"}>{word}</tspan>)
+      output.push(<tspan x={0} y={y} key={word} dy={lineNumber * lineHeight + dy + "em"}>{word}</tspan>)
       lineNumber ++;
     }
   }
